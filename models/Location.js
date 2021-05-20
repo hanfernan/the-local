@@ -5,16 +5,26 @@ class Location extends Model { }
 
 Location.init(
     {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true
+
     },
     {
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true
+        },
         location_name: {
             type: DataTypes.STRING,
             allowNull: false
         }
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'location',
     }
 )
 
