@@ -5,9 +5,6 @@ class Location extends Model { }
 
 Location.init(
     {
-
-    },
-    {
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
