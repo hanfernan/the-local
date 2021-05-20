@@ -33,10 +33,20 @@ Band.init(
             type: DataTypes.STRING,
         },
         genre_id: {
-
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'genre',
+                key: 'id',
+                unique: false
+              }
         },
         location_id: {
-
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'location',
+                key: 'id',
+                unique: false
+              }
         }
     },
     {
