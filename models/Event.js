@@ -19,13 +19,17 @@ Event.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        event_location: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
         event_link: {
             type: DataTypes.STRING,
             allowNull: false,
+        },
+        location_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'location',
+                key: 'id',
+                unique: false
+              }
         },
         band_id: {
             type: DataTypes.INTEGER,
