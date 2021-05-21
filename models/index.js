@@ -13,10 +13,10 @@ Band.belongsTo(Genre, {
 });
 
 
-Band.hasMany(Location, {
-    foreignKey: "band_id",
+Band.belongsTo(Location, {
+    foreignKey: "location_id",
     onDelete: "CASCADE"
-})
+});
 Location.hasMany(Event, {
     foreignKey:"location_id",
 
@@ -32,8 +32,8 @@ Event.belongsTo(Band, {
     onDelete: "CASCADE",
 });
 
-Event.hasMany(Location, {
-    foreignKey: "event_id",
+Event.belongsTo(Location, {
+    foreignKey: "location_id",
     onDelete: "CASCADE"
 });
 
