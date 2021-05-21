@@ -14,6 +14,21 @@ Location.init(
         location_name: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        event_id: {
+            type:DataTypes.INTEGER,
+            references: {
+                model: "event",
+                key: "id",
+            },
+        },
+        band_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: "band",
+                key:"id",
+
+            }
         }
     },
     {

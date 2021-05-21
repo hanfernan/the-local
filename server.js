@@ -1,7 +1,23 @@
 const express = require("express");
 const path = require("path");
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const app = express();
+const sequelize = require('./config/connection')
+const session = require("express-session");
+const routes = require('./controllers')
+
+const SequelizeStore = require("connect-session-sequelize")(session.Store);
+
+const sess = {
+  secret: "Super secret secret",
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize,
+  }),
+};
+app.use(session(sess));
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -12,11 +28,11 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// Send every other request to the React app
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/public/index.html"));
-});
 
-app.listen(PORT, () => {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
+app.use(routes)
+
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => {
+    console.log(`App listening on port ${PORT}!`);
+  });
 });
