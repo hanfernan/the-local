@@ -3,3 +3,42 @@ const Event = require('./Event')
 const Genre = require('./Genre')
 const Location = require('./Location')
 
+Band.hasMany(Event, {
+    foreignKey: "band_id",
+    onDelete: "CASCADE",
+});
+
+Band.belongsTo(Genre, {
+    foreignKey: "genre_id",
+});
+
+
+Band.hasMany(Location, {
+    foreignKey: "band_id",
+    onDelete: "CASCADE"
+})
+Location.hasMany(Event, {
+    foreignKey:"location_id",
+
+});
+
+Location.hasMany(Band, {
+    foreignKey: "location_id",
+    onDelete:"CASCADE",
+})
+
+Event.belongsTo(Band, {
+    foreignKey: "band_id",
+    onDelete: "CASCADE",
+});
+
+Event.hasMany(Location, {
+    foreignKey: "event_id",
+    onDelete: "CASCADE"
+});
+
+module.exports = { Band, Event, Location, Genre};
+
+
+
+
