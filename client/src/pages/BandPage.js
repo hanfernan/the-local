@@ -1,0 +1,1 @@
+//get request for band info by band id
