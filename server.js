@@ -1,9 +1,10 @@
 const express = require("express");
 const path = require("path");
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const app = express();
 const sequelize = require('./config/connection')
 const session = require("express-session");
+const routes = require('./controllers')
 
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
@@ -27,11 +28,8 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// Send every other request to the React app
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/public/index.html"));
-});
 
+app.use(routes)
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => {
