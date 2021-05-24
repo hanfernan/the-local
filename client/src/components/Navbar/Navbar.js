@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./style.css";
+import "./Nav.css";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 function Navbar() {
@@ -27,7 +27,7 @@ function Navbar() {
             </li>
             <li className='nav-item'>
                 {/* TODO: link to specific band profile based on ID */}
-              <Link to='/my-band' onClick={closeMobileMenu} className='nav-links'>
+              <Link to='/band' onClick={closeMobileMenu} className='nav-links'>
                 Edit Band Profile
               </Link>
             </li>
