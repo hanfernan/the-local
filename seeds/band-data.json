@@ -1,0 +1,18 @@
+[
+    {
+        "band_name": "BandNAME",
+        "email": "band@band.com",
+        "password": "password",
+        "bio": "this is a bio about the banddddd",
+        "genre_id": 1,
+        "location_id": 1
+    },
+    {
+        "band_name": "BandNAMETWO",
+        "email": "band2@band.com",
+        "password": "password2",
+        "bio": "this is another bio about the second banddddd",
+        "genre_id": 2,
+        "location_id": 2
+    }
+]
