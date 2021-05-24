@@ -9,22 +9,22 @@ const locationData = require("./location-data.json");
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  const bands = await Band.bulkCreate(bandData, {
-    individualHooks: true,
-    returning: true,
-  });
-
-  const events = await Event.bulkCreate(eventData, {
-    individualHooks: true,
-    returning: true,
-  });
-
   const genres = await Genre.bulkCreate(genreData, {
     individualHooks: true,
     returning: true,
   });
 
   const locations = await Location.bulkCreate(locationData, {
+    individualHooks: true,
+    returning: true,
+  });
+
+  const bands = await Band.bulkCreate(bandData, {
+    individualHooks: true,
+    returning: true,
+  });
+
+  const events = await Event.bulkCreate(eventData, {
     individualHooks: true,
     returning: true,
   });

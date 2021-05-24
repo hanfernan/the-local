@@ -2,14 +2,14 @@
     {
         "event_name": "Event 1",
         "event_date": "05-23-2021",
-        "event-link": "www.google.com",
+        "event_link": "www.google.com",
         "location_id": 1,
         "band_id": 1
     },
     {
         "event_name": "Event 2",
         "event_date": "05-25-2021",
-        "event-link": "www.yahoo.com",
+        "event_link": "www.yahoo.com",
         "location_id": 2,
         "band_id": 2
     }
