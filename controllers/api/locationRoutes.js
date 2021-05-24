@@ -9,6 +9,17 @@ router.get('/', (req, res) => {
         console.log(err)
         res.json(err)
         })
+});
+
+router.post('/', (req,res) => {
+    db.Location.create({
+        ...req.body
+    }).then(location => {
+        res.json(location)
+    })
+    .catch(err => {
+        res.json(err);
+    })
 })
 
 module.exports = router
