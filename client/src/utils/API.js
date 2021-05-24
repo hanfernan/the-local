@@ -7,6 +7,9 @@ const API = {
     },
     getLocations: () => {
         return axios.get('/api/locations')
+    },
+    createBand: function() {
+        return axios.post('/api/bands')
     }
 }
 
