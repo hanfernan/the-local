@@ -10,6 +10,9 @@ const API = {
     },
     createBand: function() {
         return axios.post('/api/bands')
+    },
+    postLocation: () => {
+        return axios.post('/api/locations')
     }
 }
 
