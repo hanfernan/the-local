@@ -1,12 +1,10 @@
 import React from "react";
-import SearchBar from "../components/Searchbar/Searchbar";
-import ResultsTable from "../components/ResultsTable/ResultsTable";
+import Bands from "../components/Bands/Bands"
 
 function Search () {
     return(
         <div>
-        <SearchBar />
-        <ResultsTable />
+        <Bands/>
         </div>
     )
 }
