@@ -19,11 +19,11 @@ class Searchbar extends Component {
         <input
           value={this.state.search}
           onChange={this.handleInputChange}
-          name="employeeSearch"
+          name="bandSearch"
           type="text"
           id="form1"
-          className="form-control"
-          placeholder="Search"
+          className="form-control col-6 m-auto"
+          placeholder="Search bands"
           aria-label="Search"
         />
       </div>
