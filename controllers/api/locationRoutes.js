@@ -11,6 +11,16 @@ router.get('/', (req, res) => {
         })
 });
 
+router.get('/:id', (req, res) => {
+    db.Location.findByPk(req.params.id).then(location => {
+        res.json(location)
+    })
+    .catch(err => {
+        console.log(err)
+        res.json(err)
+    })
+})
+
 router.post('/', (req,res) => {
     db.Location.create({
         ...req.body
@@ -20,6 +30,10 @@ router.post('/', (req,res) => {
     .catch(err => {
         res.json(err);
     })
+})
+
+router.delete('/:id', (req, res) => {
+    db.Location.destroy({where: {id: req.params.id}})
 })
 
 module.exports = router
