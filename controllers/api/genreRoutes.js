@@ -37,4 +37,19 @@ router.post('/', (req, res) => {
     })
 })
 
+router.put('/:id', (req,res) => {
+    db.Genre.update(
+        {...req.body},
+        {where: {id:req.params.id}}
+    ).then(genre => {
+        res.json(genre)
+    }).catch(err => {
+        res.json(err)
+    })
+})
+
+router.delete('/:id', (req,res) => {
+    db.Genre.destroy({where: {id: req.params.id}})
+})
+
 module.exports = router
