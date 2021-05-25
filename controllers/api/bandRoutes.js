@@ -36,6 +36,17 @@ router.post('/', (req, res) => {
     })
 })
 
+router.put('/:id', (req,res) => {
+    db.Band.update(
+        {...req.body},
+        {where: {id:req.params.id}}
+    ).then(band => {
+        res.json(band)
+    }).catch(err => {
+        res.json(err)
+    })
+})
+
 router.delete('/:id', (req, res) => {
     db.Band.destroy({where: {id: req.params.id}})
 })

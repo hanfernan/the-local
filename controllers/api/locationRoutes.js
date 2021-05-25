@@ -33,6 +33,17 @@ router.post('/', (req,res) => {
     })
 })
 
+router.put('/:id', (req,res) => {
+    db.Location.update(
+        {...req.body},
+        {where: {id:req.params.id}}
+    ).then(location => {
+        res.json(location)
+    }).catch(err => {
+        res.json(err)
+    })
+})
+
 router.delete('/:id', (req, res) => {
     db.Location.destroy({where: {id: req.params.id}})
 })
