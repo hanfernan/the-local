@@ -9,7 +9,8 @@ function Signup() {
     const pwRef = useRef();
 
     const handleSubmit = (e) => {
-        e.preventDefault();;
+        e.preventDefault();
+        console.log(bandRef.current.value)
         API.createBand({
             band_name: bandRef.current.value,
             email: emailRef.current.value,
