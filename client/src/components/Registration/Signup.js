@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useRef } from 'react';
+import API from '../../utils/API';
 // import "Registration.css";
 
 function Signup() {
@@ -6,10 +7,19 @@ function Signup() {
     const bandRef = useRef();
     const emailRef = useRef();
     const pwRef = useRef();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();;
+        API.createBand({
+            band_name: bandRef.current.value,
+            email: emailRef.current.value,
+            password: pwRef.current.value,
+        })
+    }
     return(
         <section class="single-box">
             <h2 id="signup">SIGN UP</h2>
-            <form class="signup-form">
+            <form class="signup-form" onSubmit={handleSubmit}>
                 <h3>BAND NAME</h3>
                 <input 
                 id="name-signup" 
