@@ -1,9 +1,9 @@
 import React from 'react';
-// import "Registration.css";
+import "./Registration.css";
 
 function Login() {
     return (
-        <section class="single-box">
+        <section className="reg-card-container">
             <h2 id="login">LOG IN</h2>
             <form class="login-form">
                 <h3>EMAIL</h3>
