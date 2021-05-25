@@ -10,7 +10,6 @@ function Home () {
     <div className="registration-container">
         <Login /> 
         <Signup />
-        <h1> Hello from home</h1>
     </div>
     )
 }
