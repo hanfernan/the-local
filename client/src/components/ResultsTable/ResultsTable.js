@@ -1,6 +1,6 @@
 import React from "react";
 
-function SearchResults(props) {
+function ResultsTable(props) {
   return (
     <table className="table">
       <thead>
@@ -39,4 +39,4 @@ function SearchResults(props) {
 //   );
 // };
 
-export default SearchResults;
+export default ResultsTable;
