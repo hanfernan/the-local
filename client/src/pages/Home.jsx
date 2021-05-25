@@ -1,12 +1,10 @@
 //get request for featured band
 //get request for events based on location id
-
+import React from "react"
 
 function Home () {
     return(
-        <div>
-            This will be the home page.
-        </div>
+    
     )
 }
 
