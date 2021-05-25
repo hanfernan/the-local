@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
-import axios from "axios";
-import API from "./utils/API";
+// import axios from 'axios'
+import API from './utils/API'
+import Nav from './components/Nav'
 
 function App() {
   useEffect(() => {
@@ -10,6 +11,7 @@ function App() {
   }, []);
   return (
     <div className="App">
+      <Nav />
       <h1>hello</h1>
     </div>
   );
