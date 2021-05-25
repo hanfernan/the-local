@@ -1,5 +1,5 @@
 import React from 'react';
-import "Registration.css";
+// import "Registration.css";
 
 function Login() {
     return (
@@ -18,4 +18,4 @@ function Login() {
     )
 }
 
-export default Login();
+export default Login;

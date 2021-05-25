@@ -1,5 +1,5 @@
 import React from 'react';
-import "Registration.css";
+// import "Registration.css";
 
 function Signup() {
     return(
@@ -20,4 +20,4 @@ function Signup() {
     )
 }
 
-export default Signup();
+export default Signup;
