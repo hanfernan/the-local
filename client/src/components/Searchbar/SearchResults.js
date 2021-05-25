@@ -6,11 +6,6 @@ function SearchResults(props) {
       <thead>
         <tr>
           <th scope="col">Band Name</th>
-          {/* <th scope="col">
-            <button className="nameBtn" onClick={props.sortEmployeeCallback}>
-              Name
-            </button>
-          </th> */}
           <th scope="col">City</th>
           <th scope="col">Genre</th>
         </tr>
