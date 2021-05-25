@@ -1,10 +1,12 @@
-//get request for bands by location
-//get request for bands by genre 
+import React from "react";
+import SearchBar from "../components/Searchbar/Searchbar";
+import ResultsTable from "../components/ResultsTable/ResultsTable";
 
 function Search () {
     return(
         <div>
-            This will be the search results page.
+        <SearchBar />
+        <ResultsTable />
         </div>
     )
 }
