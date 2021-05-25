@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-    db.Band.findByPk().then(band => {
+    db.Band.findByPk(req.params.id).then(band => {
         res.json(band)
     })
     .catch(err => {
