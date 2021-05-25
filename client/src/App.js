@@ -8,6 +8,7 @@ import Logout from "./pages/Logout";
 import BandUser from "./pages/BandUser";
 import Search from "./pages/SearchResults";
 
+
 function App() {
   // useEffect(() => {
   //   API.getBands().then(res => { console.log(res.data) })

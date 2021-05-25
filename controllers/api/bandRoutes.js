@@ -2,6 +2,7 @@ const router = require('express').Router()
 const db = require('../../models')
 const { Genre, Location } = require('../../models')
 
+// getting all bands
 router.get('/', (req, res) => {
     db.Band.findAll(
         {include: [{ model: Location}, { model: Genre }]}
@@ -14,6 +15,7 @@ router.get('/', (req, res) => {
     })
 })
 
+// getting a band with a certain id
 router.get('/:id', (req, res) => {
     db.Band.findByPk(req.params.id, {include: [{ model: Location}, { model: Genre}]}).then(band => {
         res.json(band)
@@ -24,6 +26,7 @@ router.get('/:id', (req, res) => {
     })
 })
 
+// creating a band
 router.post('/', (req, res) => {
     db.Band.create({
         ...req.body
@@ -36,10 +39,11 @@ router.post('/', (req, res) => {
     })
 })
 
-router.put('/:id', (req,res) => {
+// updating a band with a certain id
+router.put('/:id', (req, res) => {
     db.Band.update(
         {...req.body},
-        {where: {id:req.params.id}}
+        {where: {id: req.params.id}}
     ).then(band => {
         res.json(band)
     }).catch(err => {
@@ -47,6 +51,7 @@ router.put('/:id', (req,res) => {
     })
 })
 
+// deleting a band with a certain id
 router.delete('/:id', (req, res) => {
     db.Band.destroy({where: {id: req.params.id}})
 })
