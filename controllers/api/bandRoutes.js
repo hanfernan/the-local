@@ -11,6 +11,16 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/:id', (req, res) => {
+    db.Band.findByPk(req.params.id).then(band => {
+        res.json(band)
+    })
+    .catch(err => {
+        console.log(err)
+        res.json(err)
+    })
+})
+
 router.post('/', (req, res) => {
     db.Band.create({
         ...req.body
@@ -23,7 +33,8 @@ router.post('/', (req, res) => {
     })
 })
 
-
-//need a route for specific bank by id
+router.delete('/:id', (req, res) => {
+    db.Band.destroy({where: {id: req.params.id}})
+})
 
 module.exports = router
