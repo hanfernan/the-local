@@ -17,6 +17,7 @@ Band.belongsTo(Location, {
     foreignKey: "location_id",
     onDelete: "CASCADE"
 });
+
 Location.hasMany(Event, {
     foreignKey:"location_id",
 
@@ -36,6 +37,10 @@ Event.belongsTo(Location, {
     foreignKey: "location_id",
     onDelete: "CASCADE"
 });
+
+Genre.hasMany(Band, {
+    foreign_key: "genre_id",
+})
 
 module.exports = { Band, Event, Location, Genre};
 
