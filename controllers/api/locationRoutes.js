@@ -32,4 +32,8 @@ router.post('/', (req,res) => {
     })
 })
 
+router.delete('/:id', (req, res) => {
+    db.Location.destroy({where: {id: req.params.id}})
+})
+
 module.exports = router

@@ -33,7 +33,8 @@ router.post('/', (req, res) => {
     })
 })
 
-router.delete('/')
-//need a route for specific bank by id
+router.delete('/:id', (req, res) => {
+    db.Band.destroy({where: {id: req.params.id}})
+})
 
 module.exports = router
