@@ -1,8 +1,9 @@
 const router = require('express').Router()
 const db = require('../../models')
+const { Band } = require('../../models')
 
 router.get('/', (req, res) => {
-    db.Location.findAll().then(location => {
+    db.Location.findAll({include: [{model: Band }]}).then(location => {
         res.json(location)
     })
     .catch(err => {
@@ -12,7 +13,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-    db.Location.findByPk(req.params.id).then(location => {
+    db.Location.findByPk(req.params.id, {include: [{model: Band}]}).then(location => {
         res.json(location)
     })
     .catch(err => {
