@@ -11,6 +11,7 @@ router.post("/", async (req, res) => {
       req.session.save(() => {
         req.session.band_id = bandData.id;
         req.session.logged_in = true;
+        loggedIn = bandData.data.id;
   
         res.status(200).json(bandData);
       });
