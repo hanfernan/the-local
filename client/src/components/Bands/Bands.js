@@ -22,6 +22,7 @@ class Bands extends Component {
             name: band.band_name,
             city: band.location.location_name,
             genre: band.genre.genre_name,
+            id: band.id
           };
         });
         console.log("hello", resArray);
