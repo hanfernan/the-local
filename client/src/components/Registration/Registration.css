@@ -1,7 +1,7 @@
-.reg-card-container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 90%;
-  flex-direction: row;
-  justify-content: center;
+.login-container{
+  margin: 20px, 10px, 10px, 10px;
+}
+
+.signup-container {
+  padding: 50px, 50px, 10px, 10px;
 }

@@ -24,7 +24,7 @@ function Login() {
                     <label for="bandLoginEmail">Email Address</label>
                     <input
                         type="email"
-                        class="form-control"
+                        className="form-control"
                         id="bandLoginEmail"
                         aria-describedby="emailHelp"
                         placeholder="Enter email"
@@ -34,7 +34,7 @@ function Login() {
                 <div class="form-group">
                     <label for="bandPassword">Password</label>
                     <input type="password"
-                        class="form-control"
+                        className="form-control"
                         id="bandPassword"
                         placeholder="Password"
                         onChange={e => setInfo({ ...info, [e.target.name]: e.target.value })}

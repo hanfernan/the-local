@@ -41,7 +41,7 @@ function Signup() {
                     <label for="location-signup">Location</label>
                     <input
                         id="location-signup"
-                        class="form-control"
+                        className="form-control"
                         required
                         ref={locationRef}
                         placeholder="Enter location here"
@@ -51,7 +51,7 @@ function Signup() {
                     <label for="genre-signup">Genre</label>
                     <input
                         id="genre-signup"
-                        class="form-control"
+                        className="form-control"
                         required
                         ref={genreRef}
                         placeholder="Enter genre here"
@@ -61,7 +61,7 @@ function Signup() {
                     <label for="email-signup">Email Address</label>
                     <input
                         id="email-signup"
-                        class="form-control"
+                        className="form-control"
                         type="email"
                         required
                         ref={emailRef}
@@ -72,15 +72,12 @@ function Signup() {
                     <label for="password-signup">Password</label>
                     <input
                         id="password-signup"
-                        class="form-control"
+                        className="form-control"
                         type="password"
                         required
                         ref={pwRef}
                         placeholder="Must be at least 8 characters"
                     />
-                </div>
-                <div className="form-group">
-                    <label for=""></label>
                 </div>
                 {/* <h5>BAND NAME</h5>
                 <input
