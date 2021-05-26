@@ -23,23 +23,25 @@ function Login() {
                 <div className="form-group">
                     <label for="bandLoginEmail">Email Address</label>
                     <input
-                        type="email"
-                        className="form-control"
                         id="bandLoginEmail"
-                        aria-describedby="emailHelp"
+                        name="email"
+                        className="form-control"
+                        type="email"
                         placeholder="Enter email"
+                        aria-describedby="emailHelp"
                         onChange={e => setInfo({ ...info, [e.target.name]: e.target.value })}
                     />
                 </div>
                 <div class="form-group">
                     <label for="bandPassword">Password</label>
                     <input type="password"
-                        className="form-control"
                         id="bandPassword"
+                        name="password"
+                        className="form-control"                        
                         placeholder="Password"
                         onChange={e => setInfo({ ...info, [e.target.name]: e.target.value })}
-                         />
-                    
+                    />
+
                 </div>
                 {/* <h5>EMAIL</h5> */}
                 {/* <input
