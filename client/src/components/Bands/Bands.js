@@ -33,40 +33,42 @@ class Bands extends Component {
       });
   }
 
-  //   // Handle OnChange on search input
-  //   handleChange = (event) => {
-  //     const key = event.target.value;
-  //     const filtered = resArray.filter((entry) =>
-  //       Object.values(entry).some(
-  //         (val) => typeof val === "string" && val.includes(key)
-  //       )
+  handleChange = (event) => {
+    // Grabs the value of the user's input
+    const key = event.target.value;
+    const filtered = resArray.filter((entry) =>
+      Object.values(entry).some(
+        (val) =>
+          typeof val === "string" &&
+          val.toLowerCase().includes(key.toLowerCase())
+      )
+    );
+
+    this.setState({
+      search: event.target.value,
+      results: filtered,
+    });
+  };
+
+  // sortBy = (key) => {
+  //   if (this.state.ascending === true) {
+  //     const sortUp = this.state.results.sort((a, b) =>
+  //       a[key] < b[key] ? 1 : -1
   //     );
-
   //     this.setState({
-  //       search: event.target.value,
-  //       results: filtered,
+  //       results: sortUp,
+  //       ascending: false,
   //     });
-  //   };
-
-  //   sortBy = (key) => {
-  //     if (this.state.ascending === true) {
-  //       const sortUp = this.state.results.sort((a, b) =>
-  //         a[key] < b[key] ? 1 : -1
-  //       );
-  //       this.setState({
-  //         results: sortUp,
-  //         ascending: false,
-  //       });
-  //     } else {
-  //       const sortDown = this.state.results.sort((a, b) =>
-  //         a[key] > b[key] ? 1 : -1
-  //       );
-  //       this.setState({
-  //         results: sortDown,
-  //         ascending: true,
-  //       });
-  //     }
-  //   };
+  //   } else {
+  //     const sortDown = this.state.results.sort((a, b) =>
+  //       a[key] > b[key] ? 1 : -1
+  //     );
+  //     this.setState({
+  //       results: sortDown,
+  //       ascending: true,
+  //     });
+  //   }
+  // };
 
   render() {
     return (

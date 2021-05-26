@@ -1,17 +1,49 @@
 [
     {
-        "band_name": "BandNAME",
-        "email": "band@band.com",
-        "password": "password",
-        "bio": "this is a bio about the banddddd",
+        "band_name": "The Beatles",
+        "email": "beatles@beatles.com",
+        "password": "beatles123",
+        "bio": "We are an english rock band",
         "genre_id": 1,
         "location_id": 1
     },
     {
-        "band_name": "BandNAMETWO",
-        "email": "band2@band.com",
+        "band_name": "Queen",
+        "email": "queen@band.com",
+        "password": "Queen1234",
+        "bio": "We are Queeeen",
+        "genre_id": 1,
+        "location_id": 2
+    },
+    {
+        "band_name": "No Doubt",
+        "email": "Gwen@band.com",
         "password": "password2",
-        "bio": "this is another bio about the second banddddd",
+        "bio": "We're no doubt",
+        "genre_id": 2,
+        "location_id": 1
+    },
+     {
+        "band_name": "Coldplay",
+        "email": "coldplay@band.com",
+        "password": "coldplay123",
+        "bio": "we're cold",
+        "genre_id": 2,
+        "location_id": 2
+    },
+    {
+        "band_name": "Arctic Monkeys",
+        "email": "monkeys@band.com",
+        "password": "monkeyss",
+        "bio": "we're bananas",
+        "genre_id": 2,
+        "location_id": 1
+    },
+     {
+        "band_name": "The Rolling Stones",
+        "email": "rolling@band.com",
+        "password": "rollingstones",
+        "bio": "they see me rolling",
         "genre_id": 2,
         "location_id": 2
     }
