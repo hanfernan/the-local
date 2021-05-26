@@ -12,7 +12,8 @@ function Login() {
     const handleSubmit = (e) => {
         e.preventDefault();
         API.login(info)
-        console.log(info)
+            .then(res => console.log(res.data))
+            .catch(err => console.log(err))
     }
     return (
         <section className="reg-card-container">

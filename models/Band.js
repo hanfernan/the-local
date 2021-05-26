@@ -65,12 +65,14 @@ Band.init(
                 updatedBandData.password = await bcrypt.hash(updatedBandData.password, 10);
                 return updatedBandData;
             },
-            sequelize,
-            timestamps: false,
-            freezeTableName: true,
-            underscored: true,
-            modelName: 'band'
-        }
+        },
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'band'
+
+    }
 );
 
 module.exports = Band;

@@ -15,6 +15,7 @@ router.post("/", async (req, res) => {
         res.status(200).json(bandData);
       });
     } catch (err) {
+      console.log(ErrorEvent)
       res.status(400).json(err);
     }
   });
