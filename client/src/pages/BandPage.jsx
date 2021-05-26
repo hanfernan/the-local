@@ -5,7 +5,11 @@ import API from '../utils/API';
 
 function BandPage(props) {
     const [band, setBand] = useState({
-        band_name: ""
+        band_name: "",
+        email: "",
+        bio: "",
+        location: "",
+        genre: ""
     })
 
     const {id} = useParams()
@@ -19,7 +23,9 @@ function BandPage(props) {
     // console.log(band)
     return(
         <div>
-            <h1>{band && band.band_name}</h1>
+            <h1>{band.band_name}</h1>
+            <h2>{band.location.location_name}</h2>
+            <h2>{band.bio}</h2>
         </div>
     )
 }
