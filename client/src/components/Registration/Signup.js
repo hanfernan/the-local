@@ -24,7 +24,7 @@ function Signup() {
     return(
         <section className="reg-card-container">
             <h2 id="signup">SIGN UP</h2>
-            <form class="signup-form" onSubmit={handleSubmit}>
+            <form className="signup-form" onSubmit={handleSubmit}>
                 <h3>BAND NAME</h3>
                 <input 
                 id="name-signup" 

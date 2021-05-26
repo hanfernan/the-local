@@ -18,7 +18,7 @@ function Login() {
     return (
         <section className="reg-card-container">
             <h2 id="login">LOG IN</h2>
-            <form class="login-form" onSubmit={handleSubmit}>
+            <form className="login-form" onSubmit={handleSubmit}>
                 <h3>EMAIL</h3>
                 <input
                     id="email-login"
@@ -34,7 +34,7 @@ function Login() {
                     onChange={e => setInfo({ ...info, [e.target.name]: e.target.value })}
                 />
                 <div>
-                    <button class="login-form" type="submit">LOGIN</button>
+                    <button className="login-form" type="submit">LOGIN</button>
                 </div>
             </form>
         </section>

@@ -9,7 +9,8 @@ function UpcomingEventsTable(props) {
         return (
             <tr key={i}>
                 <td>
-                    <Link to={event.event_link} target="_blank" rel="noreferrer noopener">{event.event_name}</Link>
+                    {/* <Link to={`https://${event.event_link}`} target="_blank" rel="noreferrer noopener">{event.event_name}</Link> */}
+                    {event.event_name}
                 </td>
                 <td>{event.event_date}</td>
                 <td>{event.location_id}</td>
