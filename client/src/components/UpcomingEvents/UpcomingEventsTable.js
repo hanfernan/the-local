@@ -21,7 +21,7 @@ function UpcomingEventsTable(props) {
     });
 
     return (
-        <section>
+        <section className="upcoming-events-container">
             <h2>Upcoming Events</h2>
             <table
                 className="table table-hover table-condensed"

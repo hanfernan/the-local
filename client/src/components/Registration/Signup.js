@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import API from '../../utils/API';
 import "./Registration.css";
+import "../../App.css";
 
 function Signup() {
 
@@ -22,7 +23,7 @@ function Signup() {
         })
     }
     return(
-        <section className="reg-card-container">
+        <section className="signup-container">
             <h2 id="signup">SIGN UP</h2>
             <form className="signup-form" onSubmit={handleSubmit}>
                 <h3>BAND NAME</h3>

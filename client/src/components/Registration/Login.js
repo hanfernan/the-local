@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import "./Registration.css";
 import API from '../../utils/API';
+import "./Registration.css";
+import "../../App.css";
 
 function Login() {
 
@@ -16,7 +17,7 @@ function Login() {
             .catch(err => console.log(err))
     }
     return (
-        <section className="reg-card-container">
+        <section className="login-container">
             <h2 id="login">LOG IN</h2>
             <form className="login-form" onSubmit={handleSubmit}>
                 <h3>EMAIL</h3>
