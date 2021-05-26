@@ -11,8 +11,11 @@ const API = {
     getLocation: (id) => {
         return axios.get('/api/locations/' + id)
     },
-    createBand: function() {
-        return axios.post('/api/bands')
+    createBand: function(data) {
+        return axios.post('/api/banduser', data)
+    },
+    login: function(data) {
+        return axios.post('/api/banduser/login', data)
     },
     postLocation: () => {
         return axios.post('/api/locations')
