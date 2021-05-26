@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import API from '../utils/API';
+import SocialLinks from "../components/SocialMedia/socialLinks"
 
 function BandPage(props) {
     const [band, setBand] = useState({
@@ -27,6 +28,8 @@ function BandPage(props) {
             <h1>{band.band_name}</h1>
             <h2>{band.location.location_name}</h2>
             <h2>{band.bio}</h2>
+            <SocialLinks />
+
         </div>
     )
 }

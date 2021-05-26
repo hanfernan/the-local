@@ -7,6 +7,8 @@ function Signup() {
     const bandRef = useRef();
     const emailRef = useRef();
     const pwRef = useRef();
+    const locationRef = useRef()
+    const genreRef = useRef()
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -15,6 +17,8 @@ function Signup() {
             band_name: bandRef.current.value,
             email: emailRef.current.value,
             password: pwRef.current.value,
+            location: locationRef.current.value,
+            genre: genreRef.current.value
         })
     }
     return(
@@ -35,6 +39,20 @@ function Signup() {
                 required
                 ref={emailRef}
                 placeholder="Enter email here"
+                />
+                <h3>LOCATION</h3>
+                <input 
+                id="location-signup" 
+                required
+                ref={locationRef}
+                placeholder="Enter location here"
+                />
+                <h3>GENRE</h3>
+                <input
+                id="genre-signup"
+                required
+                ref={genreRef}
+                placeholder="Enter genre here"
                 />
                 <h3>PASSWORD</h3>
                 <input 
