@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import Logout from "./pages/Logout";
 import BandUser from "./pages/BandUser";
 import Search from "./pages/SearchResults";
-
+import BandPage from "./pages/BandPage"
 
 function App() {
   // useEffect(() => {
@@ -22,6 +22,7 @@ function App() {
           <Route path="/search" exact component={Search} />
           <Route path="/band" exact component={BandUser} />
           <Route path="/logout" exact component={Logout} />
+          <Route path="/bandpage/:id" exact component={BandPage} />
         </Switch>
       </Router>
       {/* <h1>hello</h1> */}
