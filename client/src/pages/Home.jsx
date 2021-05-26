@@ -1,6 +1,7 @@
 import React from "react";
 import Login from "../components/Registration/Login";
 import Signup from "../components/Registration/Signup";
+import UpcomingEvents from "../components/UpcomingEvents/UpcomingEvents"
 import "../App.css"
 
 
@@ -11,6 +12,7 @@ function Home () {
     
     return (
     <div className="registration-container">
+        <UpcomingEvents />
         <Login /> 
         <Signup />
     </div>
