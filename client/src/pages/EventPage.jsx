@@ -27,11 +27,11 @@ function EventPage(props) {
 
     return (
         <div>
-            <p>{event.band}</p>
+            <p>{event.band.band_name}</p>
             <h1>{event.event_name}</h1>
             <p>{event.event_date}</p>
             <p>{event.event_link}</p>
-            <p>{event.location}</p>
+            <p>{event.location.location_name}</p>
             <p></p>
         </div>
     )

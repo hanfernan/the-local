@@ -1,9 +1,10 @@
 const router = require('express').Router()
 const db = require('../../models')
+const { Location, Band } = require('../../models')
 
 router.get('/', (req,res) => {
     db.Event.findAll(
-        // {include: [{ model: Location}, { model: Band }]}
+        {include: [{ model: Location}, { model: Band }]}
     ).then(event => {
         res.json(event)
     })
