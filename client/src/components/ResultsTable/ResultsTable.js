@@ -2,9 +2,12 @@ import React from "react";
 
 function ResultsTable(props) {
   const bands = props.results.map((band, i) => {
+    console.log(band)
     return (
       <tr key={i}>
-        <td>{band.name}</td>
+        <td>
+          <a href = {`/bandpage/${band.id}`} >{band.name}</a>
+        </td>
         <td>{band.city}</td>
         <td>{band.genre}</td>
       </tr>

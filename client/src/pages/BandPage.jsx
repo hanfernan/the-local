@@ -5,6 +5,7 @@ import API from '../utils/API';
 
 function BandPage(props) {
     const [band, setBand] = useState({
+        id: "",
         band_name: "",
         email: "",
         bio: "",
