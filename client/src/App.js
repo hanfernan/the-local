@@ -25,7 +25,6 @@ function App() {
           <Route path="/eventpage/:id" exact component={EventPage} />
         </Switch>
       </Router>
-      {/* <h1>hello</h1> */}
     </div>
   );
 }
