@@ -14,8 +14,8 @@ function Home () {
     return (
         <div className="home-container">
             <div className="col">
-                <UpcomingEvents />
                 <FeaturedBand />
+                <UpcomingEvents />                
             </div>            
             <div className="registration-container">
                 <Login /> 

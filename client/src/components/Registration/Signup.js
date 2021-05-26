@@ -26,14 +26,14 @@ function Signup() {
         <section className="signup-container">
             <h2 id="signup">SIGN UP</h2>
             <form className="signup-form" onSubmit={handleSubmit}>
-                <h3>BAND NAME</h3>
+                <h5>BAND NAME</h5>
                 <input 
                 id="name-signup" 
                 required
                 ref={bandRef}
                 placeholder="Enter band name here"
                 />
-                <h3>EMAIL</h3>
+                <h5>EMAIL</h5>
                 <input 
                 id="email-signup" 
                 type="EMAIL" 
@@ -41,21 +41,21 @@ function Signup() {
                 ref={emailRef}
                 placeholder="Enter email here"
                 />
-                <h3>LOCATION</h3>
+                <h5>LOCATION</h5>
                 <input 
                 id="location-signup" 
                 required
                 ref={locationRef}
                 placeholder="Enter location here"
                 />
-                <h3>GENRE</h3>
+                <h5>GENRE</h5>
                 <input
                 id="genre-signup"
                 required
                 ref={genreRef}
                 placeholder="Enter genre here"
                 />
-                <h3>PASSWORD</h3>
+                <h5>PASSWORD</h5>
                 <input 
                 id="password-signup"
                 type="password" 
@@ -64,7 +64,7 @@ function Signup() {
                 placeholder="enter password here"
                 />
                 <div>
-                    <button type="submit">SIGN UP</button>
+                    <button type="submit" className="btn btn-dark">SIGN UP</button>
                 </div>
             </form>
         </section>
