@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./Registration.css";
+import API from '../../utils/API';
 
 function Login() {
 
@@ -10,8 +11,7 @@ function Login() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // need login route for API request
-        //API.request(info)
+        API.login(info)
         console.log(info)
     }
     return (

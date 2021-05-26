@@ -14,6 +14,9 @@ const API = {
     createBand: function(data) {
         return axios.post('/api/banduser', data)
     },
+    login: function(data) {
+        return axios.post('/api/banduser/login', data)
+    },
     postLocation: () => {
         return axios.post('/api/locations')
     },
