@@ -18,6 +18,7 @@ router.get('/', (req, res) => {
 // getting a band with a certain id
 router.get('/:id', (req, res) => {
     db.Band.findByPk(req.params.id, {include: [{ model: Location}, { model: Genre}]}).then(band => {
+        console.log(req.params.id)
         res.json(band)
     })
     .catch(err => {
