@@ -1,7 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import axios from "axios";
-import API from "./utils/API";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home";
 import Logout from "./pages/Logout";
@@ -27,7 +25,6 @@ function App() {
           <Route path="/eventpage/:id" exact component={EventPage} />
         </Switch>
       </Router>
-      {/* <h1>hello</h1> */}
     </div>
   );
 }

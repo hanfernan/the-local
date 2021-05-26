@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import "./Registration.css";
 import API from '../../utils/API';
+import "./Registration.css";
+import "../../App.css";
 
 function Login() {
 
@@ -16,25 +17,48 @@ function Login() {
             .catch(err => console.log(err))
     }
     return (
-        <section className="reg-card-container">
+        <section className="login-container">
             <h2 id="login">LOG IN</h2>
-            <form class="login-form" onSubmit={handleSubmit}>
-                <h3>EMAIL</h3>
-                <input
+            <form className="login-form" onSubmit={handleSubmit}>
+                <div className="form-group">
+                    <label for="bandLoginEmail">Email Address</label>
+                    <input
+                        id="bandLoginEmail"
+                        name="email"
+                        className="form-control"
+                        type="email"
+                        placeholder="Enter email"
+                        aria-describedby="emailHelp"
+                        onChange={e => setInfo({ ...info, [e.target.name]: e.target.value })}
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="bandPassword">Password</label>
+                    <input type="password"
+                        id="bandPassword"
+                        name="password"
+                        className="form-control"                        
+                        placeholder="Password"
+                        onChange={e => setInfo({ ...info, [e.target.name]: e.target.value })}
+                    />
+
+                </div>
+                {/* <h5>EMAIL</h5> */}
+                {/* <input
                     id="email-login"
                     type="EMAIL"
                     name="email"
-                    onChange={e => setInfo({ ...info, [e.target.name]: e.target.value })} />
+                    onChange={e => setInfo({ ...info, [e.target.name]: e.target.value })} /> */}
                 {/* square brackets allow you to insert the key */}
-                <h3>PASSWORD</h3>
-                <input
-                    id="password-login"
-                    type="password"
-                    name="password"
-                    onChange={e => setInfo({ ...info, [e.target.name]: e.target.value })}
-                />
+                {/* <h5>PASSWORD</h5> */}
+                {/* <input
+                        id="password-login"
+                        type="password"
+                        name="password"
+                        onChange={e => setInfo({ ...info, [e.target.name]: e.target.value })}
+                    /> */}
                 <div>
-                    <button class="login-form" type="submit">LOGIN</button>
+                    <button className="btn btn-dark" type="submit">LOGIN</button>
                 </div>
             </form>
         </section>

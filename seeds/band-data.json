@@ -46,5 +46,13 @@
         "bio": "they see me rolling",
         "genre_id": 2,
         "location_id": 2
+    },
+    {
+        "band_name": "Shiny Toy Guns",
+        "email": "littleboys@littletoys.com",
+        "password": "password",
+        "bio": "We're the dreams you believe in",
+        "genre_id": 1,
+        "location_id": 2
     }
 ]
