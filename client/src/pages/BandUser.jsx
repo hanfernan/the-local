@@ -19,10 +19,14 @@ function BandUser () {
     })
 
     useEffect(() => {
-        API.getBand().then(band => {
+        API.getUserBand(1).then(band => {
+            console.log(band)
             console.log(band.data);
-            console.log(bandInfo.id)
-            setBandInfo({...bandInfo, ...band.data})
+            console.log(band.data.id)
+            setBandInfo({...bandInfo, 
+                bandName:band.data.band_name, genre:band.data.genre.genre_name, bio: band.data.bio, 
+                location: band.data.location.location_name, email:band.data.email, id:band.data.id })
+            console.log(bandInfo.bandName)
         })
         .catch(err => console.log(err))
     }, [])

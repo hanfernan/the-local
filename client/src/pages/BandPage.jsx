@@ -2,16 +2,18 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import API from '../utils/API';
-import SocialLinks from "../components/SocialMedia/SocialLinks"
+import SocialLinks from "../components/SocialMedia/socialLinks"
+import EmbedVideo from '../components/EmbedVideo'
 
-function BandPage(props) {
+function BandPage() {
     const [band, setBand] = useState({
         id: "",
         band_name: "",
         email: "",
         bio: "",
         location: "",
-        genre: ""
+        genre: "",
+        featured_video: ""
     })
 
     const {id} = useParams()
@@ -22,14 +24,13 @@ function BandPage(props) {
             .catch(err => console.log(err))
     }, [id])
 
-    // console.log("band", band)
     return(
         <div>
             <h1>{band.band_name}</h1>
             <h2>{band.location.location_name}</h2>
             <h2>{band.bio}</h2>
-            <SocialLinks />
-
+            <EmbedVideo band = {band} />
+            <SocialLinks band = {band}/>
         </div>
     )
 }
