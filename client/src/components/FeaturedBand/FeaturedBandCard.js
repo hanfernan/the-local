@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
-import API from "../../utils/API"
+import React from "react";
 import "./FeaturedBand.css";
 import "../../App.css";
 
-function FeaturedBandCard() {
+function FeaturedBandCard(props) {
     return (
         <>
             <div className="feat-band-container card">

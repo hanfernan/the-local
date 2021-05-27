@@ -11,7 +11,9 @@ function FeaturedBand() {
         API.getBands()
             .then(res => {
                 console.log(res.data)
-                setBand(res.data)
+                var randomBand= res.data[Math.floor(Math.random() * res.data.length)]
+                console.log(randomBand)
+                setBand(randomBand)
             })
     }, []);
 
