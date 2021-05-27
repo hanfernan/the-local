@@ -4,7 +4,7 @@ import Signup from "../components/Registration/Signup";
 import UpcomingEvents from "../components/UpcomingEvents/UpcomingEvents"
 import FeaturedBand from "../components/FeaturedBand/FeaturedBand"
 import "../App.css"
-
+import API from '../utils/API'
 
 //get request for featured band
 //get request for events based on location id
