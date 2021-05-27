@@ -16,7 +16,7 @@ class Bands extends Component {
   componentDidMount() {
     API.getBands()
       .then((response) => {
-        console.log("response", response.data);
+        // console.log("response", response.data);
         resArray = response.data.map((band) => {
           return {
             name: band.band_name,
@@ -25,7 +25,7 @@ class Bands extends Component {
             id: band.id,
           };
         });
-        console.log("hello", resArray);
+        // console.log("hello", resArray);
 
         this.setState({ results: resArray });
       })
