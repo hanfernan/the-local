@@ -27,7 +27,7 @@ function Signup() {
             <h2 id="signup">SIGN UP</h2>
             <form className="signup-form" onSubmit={handleSubmit}>
                 <div className="form-group">
-                    <label htmlFor="bandName-signup">Band Name</label>
+                    <label for="bandName-signup">Band Name</label>
                     <input
                         id="bandName-signup"
                         class="form-control"
@@ -38,21 +38,21 @@ function Signup() {
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="location-signup">Location</label>
+                    <label for="location-signup">Location</label>
                     <select id="location-signup" name="location-signup">
                         <option value="Atlanta">Atlanta</option>
                         <option value="Chicago">Chicago</option>
                     </select>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="genre-signup">Genre</label>
+                    <label for="genre-signup">Genre</label>
                     <select id="genre-signup" name="genre-signup">
                         <option value="pop">Pop</option>
                         <option value="rock">Rock</option>
                     </select>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="email-signup">Email Address</label>
+                    <label for="email-signup">Email Address</label>
                     <input
                         id="email-signup"
                         className="form-control"
@@ -63,7 +63,7 @@ function Signup() {
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="password-signup">Password</label>
+                    <label for="password-signup">Password</label>
                     <input
                         id="password-signup"
                         className="form-control"
