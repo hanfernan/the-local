@@ -1,16 +1,38 @@
 import React from "react";
+import Row from "../Row";
+import Col from "../Col";
 
 function aboutCard(props) {
     return (
-        <div class="card">
-            <div class="card-header">
-                {props.bandName}
+        <div className="card" style={{marginTop:50}}>
+            <div class="card-header" style={{fontWeight: "bolder"}}>
+                <Row>
+                    <Col size="md-9">
+                        <h1 className="text-center">{props.bandName}</h1>
+                    </Col>
+                    <Col size="md-3">
+                        <button className="btn btn-dark" style={{marginLeft: 3}}>Edit</button>
+                    </Col>
+
+                </Row>
+                
+                
             </div>
             <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                <p>A well-known quote, contained in a blockquote element.</p>
-                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                </blockquote>
+                <div>
+                    <p>{props.bio}</p>
+                </div>
+                <Row>
+                    <Col size="md-6">
+                        <p>Genre: {props.genre}</p>
+                        <button className="btn btn-dark">Edit</button>
+                    </Col>
+                    <Col size="md-6">
+                        <p>Location: {props.location}</p>
+                        <button className="btn btn-dark">Edit</button>
+                    </Col>
+                </Row>
+
             </div>
          </div>
     )

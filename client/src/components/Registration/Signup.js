@@ -6,8 +6,8 @@ import "../../App.css";
 function Signup(props) {
   const [location, setLocation] = useState("");
   const [genre, setGenre] = useState("");
-  const [locationValue, setLocationValue] = useState(1)
-  const [genreValue, setGenreValue] = useState(1)
+  const [locationValue, setLocationValue] = useState(1);
+  const [genreValue, setGenreValue] = useState(1);
 
   useEffect(() => {
     API.getLocations().then((response) => {
@@ -24,10 +24,10 @@ function Signup(props) {
   const bandRef = useRef();
   const emailRef = useRef();
   const pwRef = useRef();
-  const locationRef = ""
-  const genreRef = ""
+  const locationRef = "";
+  const genreRef = "";
   const bioRef = useRef();
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     API.createBand({
@@ -38,7 +38,7 @@ function Signup(props) {
       genre_id: genreValue,
       bio: bioRef.current.value,
     });
-    console.log(locationValue)
+    console.log(locationValue);
   };
 
   let locationsList =
@@ -47,21 +47,22 @@ function Signup(props) {
       return <option value={item.id}>{item.location_name}</option>;
     });
 
-  let genreList = 
+  let genreList =
     genre.length > 0 &&
     genre.map((item, i) => {
-        return <option value={item.id}>{item.genre_name}</option>
-    })
+      return <option value={item.id}>{item.genre_name}</option>;
+    });
+  // console.log(locationValue)
 
   return (
-    <section className="signup-container" >
+    <section className="signup-container">
       <h2 id="signup">SIGN UP</h2>
-      <form className="signup-form" onSubmit = {handleSubmit}>
+      <form className="signup-form" onSubmit={handleSubmit}>
         <div className="form-group">
-          <label for="bandName-signup">Band Name</label>
+          <label htmlFor="bandName-signup">Band Name</label>
           <input
             id="bandName-signup"
-            class="form-control"
+            className="form-control"
             type="text"
             required
             ref={bandRef}
@@ -69,19 +70,31 @@ function Signup(props) {
           />
         </div>
         <div className="form-group">
-          <label for="location-signup">Location</label>
-          <select value = {locationValue} onChange={e => setLocationValue(e.currentTarget.value)} id="location-signup" name={locationRef}>
+          <label htmlFor="location-signup">Location</label>
+          <select
+            value={locationValue}
+            onChange={(e) => setLocationValue(e.currentTarget.value)}
+            id="location-signup"
+            className="form-control"
+            name={locationRef}
+          >
             {locationsList}
           </select>
         </div>
         <div className="form-group">
-          <label for="genre-signup">Genre</label>
-          <select value = {genreValue} onChange={e => setGenreValue(e.currentTarget.value)} id="genre-signup" name={genreRef}>
+          <label htmlFor="genre-signup">Genre</label>
+          <select
+            value={genreValue}
+            onChange={(e) => setGenreValue(e.currentTarget.value)}
+            id="genre-signup"
+            className="form-control"
+            name={genreRef}
+          >
             {genreList}
           </select>
         </div>
         <div className="form-group">
-          <label for="bio-signup">Bio</label>
+          <label htmlFor="bio-signup">Bio</label>
           <input
             id="bio-signup"
             class="form-control"
@@ -92,7 +105,7 @@ function Signup(props) {
           />
         </div>
         <div className="form-group">
-          <label for="email-signup">Email Address</label>
+          <label htmlFor="email-signup">Email Address</label>
           <input
             id="email-signup"
             className="form-control"
@@ -103,7 +116,7 @@ function Signup(props) {
           />
         </div>
         <div className="form-group">
-          <label for="password-signup">Password</label>
+          <label htmlFor="password-signup">Password</label>
           <input
             id="password-signup"
             className="form-control"
