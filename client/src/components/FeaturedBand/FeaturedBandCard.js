@@ -3,25 +3,19 @@ import "./FeaturedBand.css";
 import "../../App.css";
 
 function FeaturedBandCard(props) {
+    // console.log(props)
+    // var randomBand = props.band[Math.floor(Math.random() * props.band.length)];
+    // console.log(randomBand);
     return (
         <>
             <div className="feat-band-container card">
                 <div className="card-header">Featured Band</div>
-                <h3 className="card-title">Yusuf/ CatDog Stevens</h3>
-                <h5 className="card-subtitle">Location: Next Door!</h5>
-                <h5 className="card-subtitle">Genre: A good one</h5>
-                <p className="card-text"> One fine day with a woof and a purr
-                A baby was born and it caused a little stir
-                No blue buzzard, no three-eyed frog
-                Just a feline canine little CatDog, CatDog, CatDog
-                Alone in the world was a little CatDog.
-                <br/>
-                Out on the road or back in town
-                All kinda critters putting CatDog down
-                Gotta rise above it, gotta try to get along
-                Gotta walk together, gotta sing this song
-                CatDog, CatDog, Alone in the world was a little CatDog,
-                CatDog (CatDog), CatDog (CatDog) Alone in the world was a little CatDog</p>
+                <h3 className="card-title">{props.band.band_name}</h3>
+                {/* <h5 className="card-subtitle">Location: </h5> */}
+                {/* <h5 className="card-subtitle">Location: {props.band.genre.genre_name} </h5> */}
+                {/* <h5 className="card-subtitle">Genre: </h5> */}
+                {/* <h5 className="card-subtitle">Genre: {props.band.location} </h5> */}
+                <p className="card-text"> Bio: {props.band.bio}</p>
             </div>
         </>
     )
