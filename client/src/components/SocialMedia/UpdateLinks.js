@@ -10,10 +10,10 @@ function UpdateLinks() {
     soundcloud: "",
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (res, req, e) => {
     e.preventDefault();
     console.log("hi!");
-    API.updateBand({ where: {id: req.session.band_id} }).then((res) =>
+    API.updateBand({ where: { id: req.session.band_id } }).then((res) =>
       console.log("hi", res.data)
     );
     //   .catch((err) => console.log(err));
