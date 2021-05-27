@@ -4,7 +4,7 @@ import Row from "../components/Row"
 import AboutCard from "../components/aboutCard"
 import API from "../utils/API";
 import Container from "../components/Container/index"
-import SocialLinks from "../components/SocialMedia/SocialLinks"
+import SocialLinks from "../components/SocialMedia/socialLinks"
 import UpdateLinks from "../components/SocialMedia/UpdateLinks"
 
 
