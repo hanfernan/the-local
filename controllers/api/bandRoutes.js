@@ -21,7 +21,6 @@ router.get("/:id", (req, res) => {
     include: [{ model: Location }, { model: Genre }],
   })
     .then((band) => {
-      console.log(req.params.id);
       res.json(band);
     })
     .catch((err) => {
