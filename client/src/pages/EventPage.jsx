@@ -16,7 +16,7 @@ function EventPage(props) {
     useEffect(() => {
         API.getEvents(id)
             .then(res => {
-                setEvent(res.data[0])
+                setEvent(res.data[id -1])
                 console.log(res.data)
                 console.log(event)
             })
