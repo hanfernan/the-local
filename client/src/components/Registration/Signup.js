@@ -39,23 +39,17 @@ function Signup() {
                 </div>
                 <div className="form-group">
                     <label for="location-signup">Location</label>
-                    <input
-                        id="location-signup"
-                        className="form-control"
-                        required
-                        ref={locationRef}
-                        placeholder="Enter location here"
-                    />
+                    <select id="location-signup" name="location-signup">
+                        <option value="Atlanta">Atlanta</option>
+                        <option value="Chicago">Chicago</option>
+                    </select>
                 </div>
                 <div className="form-group">
                     <label for="genre-signup">Genre</label>
-                    <input
-                        id="genre-signup"
-                        className="form-control"
-                        required
-                        ref={genreRef}
-                        placeholder="Enter genre here"
-                    />
+                    <select id="genre-signup" name="genre-signup">
+                        <option value="pop">Pop</option>
+                        <option value="rock">Rock</option>
+                    </select>
                 </div>
                 <div className="form-group">
                     <label for="email-signup">Email Address</label>
