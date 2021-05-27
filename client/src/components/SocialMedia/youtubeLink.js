@@ -3,7 +3,8 @@ import React from 'react'
 function YoutubeLink(props) {
     if (props.band.youtube) {
       return (
-          <div>hello</div>
+          <a href={props.band.youtube} target="__blank" className ="fa fa-youtube"> 
+          </a>
       )
     } else {
         return (
