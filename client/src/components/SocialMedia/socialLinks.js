@@ -7,9 +7,9 @@ class SocialLinks extends Component {
       <div className="icon-container">
         <a href="https://www.facebook.com" className="fa fa-facebook"></a>
         <a href="https://www.twitter.com" className="fa fa-twitter"></a>
-        <a href="https://www.youtube.com" class="fa fa-youtube"></a>
-        <a href="https://www.instagram.com" class="fa fa-instagram"></a>
-        <a href="https://www.soundcloud.com" class="fa fa-soundcloud"></a>
+        <a href="https://www.youtube.com" className="fa fa-youtube"></a>
+        <a href="https://www.instagram.com" className="fa fa-instagram"></a>
+        <a href="https://www.soundcloud.com" className="fa fa-soundcloud"></a>
       </div>
     );
   }
