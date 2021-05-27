@@ -1,6 +1,6 @@
 const router = require('express').Router()
 const { response } = require('express')
-const { Band } = require('../../models')
+const { Band, Event, Location, Genre } = require('../../models')
 
 // signing up as a band
 router.post("/", async (req, res) => {
@@ -55,5 +55,19 @@ router.post("/login", async (req,res) => {
   } catch (err) {
     res.status(400).json(err);
   }
+})
+
+router.get("/:id", (req, res) => {
+  Band.findByPk(req.session.band_id,{
+    include: [{ model: Location }, { model: Genre }, { model: Event}],
+  })
+  .then((band) => {
+    res.json(band)
+    console.log(band)
+  })
+  .catch((err) => {
+    res.json(err)
+  })
+
 })
 module.exports = router

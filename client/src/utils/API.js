@@ -64,6 +64,9 @@ const API = {
     },
     deleteGenre: (id) => {
         return axios.delete('/api/genres/' + id)
+    },
+    getUserBand: (id) => {
+        return axios.get('/api/banduser/' + id)
     }
 }
 
