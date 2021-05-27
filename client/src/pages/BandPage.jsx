@@ -17,12 +17,12 @@ function BandPage(props) {
     const {id} = useParams()
     useEffect(() => {
         API.getBand(id)
-            .then(res => {setBand(res.data)
-            console.log(res.data)})
+            .then(res => {setBand(res.data)})
+            // console.log("res", res.data)})
             .catch(err => console.log(err))
     }, [id])
 
-    // console.log(band)
+    // console.log("band", band)
     return(
         <div>
             <h1>{band.band_name}</h1>
