@@ -1,36 +1,68 @@
-import React, { useRef } from 'react';
-import API from '../../utils/API';
+import React, { useEffect, useRef, useState } from "react";
+import API from "../../utils/API";
 import "./Registration.css";
 import "../../App.css";
 
-function Signup() {
+function Signup(props) {
+    const [location, setLocation] = useState("");
+    const [genre, setGenre] = useState("");
+    const [locationValue, setLocationValue] = useState(1)
+    const [genreValue, setGenreValue] = useState(1)
+
+    useEffect(() => {
+        API.getLocations().then((response) => {
+            setLocation(response.data);
+        });
+    }, []);
+
+    useEffect(() => {
+        API.getGenres().then((response) => {
+            setGenre(response.data);
+        });
+    }, []);
 
     const bandRef = useRef();
     const emailRef = useRef();
     const pwRef = useRef();
-    const locationRef = useRef()
-    const genreRef = useRef()
+    const locationRef = ""
+    const genreRef = ""
+    const bioRef = useRef();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(bandRef.current.value)
         API.createBand({
             band_name: bandRef.current.value,
             email: emailRef.current.value,
             password: pwRef.current.value,
-            location: locationRef.current.value,
-            genre: genreRef.current.value
+            location_id: locationValue,
+            genre_id: genreValue,
+            bio: bioRef.current.value,
+        });
+        console.log(locationValue)
+    };
+
+    let locationsList =
+        location.length > 0 &&
+        location.map((item, i) => {
+            return <option value={item.id}>{item.location_name}</option>;
+        });
+
+    let genreList =
+        genre.length > 0 &&
+        genre.map((item, i) => {
+            return <option value={item.id}>{item.genre_name}</option>
         })
-    }
+    // console.log(locationValue)
+
     return (
-        <section className="signup-container">
+        <section className="signup-container" >
             <h2 id="signup">SIGN UP</h2>
             <form className="signup-form" onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="bandName-signup">Band Name</label>
                     <input
                         id="bandName-signup"
-                        class="form-control"
+                        className="form-control"
                         type="text"
                         required
                         ref={bandRef}
@@ -39,17 +71,26 @@ function Signup() {
                 </div>
                 <div className="form-group">
                     <label htmlFor="location-signup">Location</label>
-                    <select id="location-signup" name="location-signup" className="form-control">
-                        <option value="Atlanta">Atlanta</option>
-                        <option value="Chicago">Chicago</option>
+                    <select value={locationValue} onChange={e => setLocationValue(e.currentTarget.value)} id="location-signup" className="form-control" name={locationRef}>
+                        {locationsList}
                     </select>
                 </div>
                 <div className="form-group">
                     <label htmlFor="genre-signup">Genre</label>
-                    <select id="genre-signup" name="genre-signup" className="form-control">
-                        <option value="pop">Pop</option>
-                        <option value="rock">Rock</option>
+                    <select value={genreValue} onChange={e => setGenreValue(e.currentTarget.value)} id="genre-signup" className="form-control" name={genreRef}>
+                        {genreList}
                     </select>
+                </div>
+                <div className="form-group">
+                    <label htmlFor="bio-signup">Bio</label>
+                    <input
+                        id="bio-signup"
+                        class="form-control"
+                        type="text"
+                        required
+                        ref={bioRef}
+                        placeholder="Enter bio here"
+                    />
                 </div>
                 <div className="form-group">
                     <label htmlFor="email-signup">Email Address</label>
@@ -73,49 +114,14 @@ function Signup() {
                         placeholder="Must be at least 8 characters"
                     />
                 </div>
-                {/* <h5>BAND NAME</h5>
-                <input
-                    id="name-signup"
-                    required
-                    ref={bandRef}
-                    placeholder="Enter band name here"
-                /> */}
-                {/* <h5>EMAIL</h5>
-                <input
-                    id="email-signup"
-                    type="EMAIL"
-                    required
-                    ref={emailRef}
-                    placeholder="Enter email here"
-                /> */}
-                {/* <h5>LOCATION</h5>
-                <input
-                    id="location-signup"
-                    required
-                    ref={locationRef}
-                    placeholder="Enter location here"
-                /> */}
-                {/* <h5>GENRE</h5>
-                <input
-                    id="genre-signup"
-                    required
-                    ref={genreRef}
-                    placeholder="Enter genre here"
-                /> */}
-                {/* <h5>PASSWORD</h5>
-                <input
-                    id="password-signup"
-                    type="password"
-                    required
-                    ref={pwRef}
-                    placeholder="enter password here"
-                /> */}
                 <div>
-                    <button type="submit" className="btn btn-dark">SIGN UP</button>
+                    <button type="submit" className="btn btn-dark">
+                        SIGN UP
+          </button>
                 </div>
             </form>
         </section>
-    )
+    );
 }
 
 export default Signup;
