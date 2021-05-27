@@ -6,11 +6,21 @@ import "../../App.css";
 
 function FeaturedBand() {
     const [band, setBand] = useState([])
+
+    useEffect(() => {
+        API.getBands()
+            .then(res => {
+                console.log(res.data)
+                setBand(res.data)
+            })
+    }, []);
+
+    return (
+        <>
+            <FeaturedBandCard band={band} />
+        </>
+    )
 }
 
-return (
-    <>
-    <FeaturedBandCard band={band}/>
-    </>
-)
+
 export default FeaturedBand
