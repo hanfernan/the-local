@@ -52,7 +52,6 @@ function Signup(props) {
     genre.map((item, i) => {
         return <option value={item.id}>{item.genre_name}</option>
     })
-    // console.log(locationValue)
 
   return (
     <section className="signup-container" >
