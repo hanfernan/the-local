@@ -30,7 +30,7 @@ function Signup() {
                     <label for="bandName-signup">Band Name</label>
                     <input
                         id="bandName-signup"
-                        class="form-control"
+                        className="form-control"
                         type="text"
                         required
                         ref={bandRef}

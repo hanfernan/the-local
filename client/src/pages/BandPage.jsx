@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import API from '../utils/API';
-import SocialLinks from "../components/SocialMedia/socialLinks"
+import SocialLinks from "../components/SocialMedia/SocialLinks"
 
 function BandPage(props) {
     const [band, setBand] = useState({
