@@ -31,7 +31,6 @@ function App() {
     // }
     <div className="App">
       <Router>
-      {!loggedIn && <Redirect to= "/login"/> }
         <Navbar />
         <Switch>
           <Route path="/" exact component={Home} />
