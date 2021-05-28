@@ -7,17 +7,17 @@ function AboutCard(props) {
     const [state, editState] = useState(false)
    
     
-    handleFormSubmit = (e) => {
-        e.preventDefault();
-        API.updateBand(props.id,{body}).then(band => {
-            console.log(band)
-        })
-        .catch((err) => {
-            console.log(err);
+    // handleFormSubmit = (e) => {
+    //     e.preventDefault();
+    //     API.updateBand(props.id,{body}).then(band => {
+    //         console.log(band)
+    //     })
+    //     .catch((err) => {
+    //         console.log(err);
 
-        })
+    //     })
 
-    }
+    // }
     return (
         <div className="card" style={{marginTop:50}}>
             <div class="card-header" style={{fontWeight: "bolder"}}>
