@@ -13,7 +13,13 @@ function UpcomingEventsTable(props) {
     return formattedDate;
   }
 
-  const events = props.events.map((event, i) => {
+  const sortedEvents = props.events.sort(function (a, b) {
+    var dateA = new Date(a.event_date),
+      dateB = new Date(b.event_date);
+    return dateA - dateB;
+  });
+
+  const events = sortedEvents.map((event, i) => {
     console.log(event.id);
     return (
       <tr key={i}>
