@@ -5,7 +5,8 @@
         "password": "beatles123",
         "bio": "We are an english rock band",
         "genre_id": 1,
-        "location_id": 1
+        "location_id": 1,
+        "featured_instagram": "https://www.instagram.com/p/CPVW7ILNyZV/"
     },
     {
         "band_name": "Queen",
