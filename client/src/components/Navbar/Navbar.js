@@ -48,7 +48,7 @@ function Nav(props) {
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='/login' onClick={logOut} className='nav-links'>
+              <Link to='/' onClick={logOut} className='nav-links'>
                 Logout
               </Link>
             </li>            
