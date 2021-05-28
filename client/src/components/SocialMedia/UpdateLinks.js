@@ -8,6 +8,7 @@ function UpdateLinks(props) {
     youtube: "",
     instagram: "",
     soundcloud: "",
+    featured_video: ""
   });
 
   const handleSubmit = (e) => {
@@ -107,6 +108,24 @@ function UpdateLinks(props) {
               <button
                 type="submit"
                 className="btn btn-primary mb-4 mt-2 soundcloudBtn"
+                onClick={handleSubmit}
+              >
+                Save
+              </button>
+            </div>
+            <div className="form d-flex">
+              <i className="fa fa-youtube"></i>
+              <input
+                id="embedVideo"
+                name="embedVideo"
+                className="form-control mx-sm-3 mb-2 mt-3"
+                type="embedVideo"
+                placeholder="Featured Video (paste Youtube link)"
+                onChange={(e) => setUrl({ featured_video: e.target.value })}
+              />
+              <button
+                type="submit"
+                className="btn btn-primary mb-4 mt-2 embedVideoBtn"
                 onClick={handleSubmit}
               >
                 Save

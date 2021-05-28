@@ -4,5 +4,29 @@
     },
     {
         "location_name": "Chicago, IL"
+    },
+    {
+        "location_name": "Los Angeles, CA"
+    },
+    {
+        "location_name": "Miami, FL"
+    },
+    {
+        "location_name": "Denver, CO"
+    },
+    {
+        "location_name": "Austin, TX"
+    },
+    {
+        "location_name": "New York, NY"
+    },
+    {
+        "location_name": "San Francisco, CA"
+    },
+    {
+        "location_name": "Washington, DC"
+    },
+    {
+        "location_name": "Seattle, WA"
     }
 ]
