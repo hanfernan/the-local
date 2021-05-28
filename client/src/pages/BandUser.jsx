@@ -3,8 +3,9 @@ import Col from "../components/Col"
 import Row from "../components/Row"
 import AboutCard from "../components/aboutCard"
 import API from "../utils/API";
-import Container from "../components/Container/index"
-import UpdateLinks from "../components/SocialMedia/UpdateLinks"
+import Container from "../components/Container/index";
+import UpdateLinks from "../components/SocialMedia/UpdateLinks";
+// import AddEventForm from "../components/UpcomingEvents/AddEventForm";
 
 
 function BandUser () {
@@ -45,6 +46,7 @@ function BandUser () {
                    <Col size="md-8">
                    <UpdateLinks id={bandInfo.id}/>
                    </Col>
+                  
                 </Row>
             </Container>
         </div>
