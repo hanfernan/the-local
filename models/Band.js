@@ -65,6 +65,14 @@ Band.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
+    featured_video: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    featured_instagram: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
     location_id: {
       type: DataTypes.INTEGER,
       references: {

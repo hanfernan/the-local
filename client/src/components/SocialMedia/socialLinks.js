@@ -1,18 +1,28 @@
-import React, { Component } from "react";
+import React from "react";
 import "./socialLinks.css";
+import YoutubeLink from "./youtubeLink";
+import FacebookLink from "./facebookLink";
+import SecondYoutubeLink from "./secondYoutubeLink";
+import InstagramLink from "./instagramLink";
+import SoundcloudLink from "./soundcloudLink";
+import TwitterLink from "./twitterLink";
 
-class SocialLinks extends Component {
-  render() {
-    return (
-      <div className="icon-container">
-        <a href="https://www.facebook.com" className="fa fa-facebook"></a>
-        <a href="https://www.twitter.com" className="fa fa-twitter"></a>
-        <a href="https://www.youtube.com" className="fa fa-youtube"></a>
-        <a href="https://www.instagram.com" className="fa fa-instagram"></a>
-        <a href="https://www.soundcloud.com" className="fa fa-soundcloud"></a>
+function SocialLinks(props) {
+  return (
+    <div>
+      <div>
+        <YoutubeLink band={props.band} />
       </div>
-    );
-  }
+      <h3>Follow us:</h3>
+      <div>
+        <FacebookLink band={props.band} />
+        <SecondYoutubeLink band={props.band} />
+        <InstagramLink band={props.band} />
+        <SoundcloudLink band={props.band} />
+        <TwitterLink band={props.band} />
+      </div>
+    </div>
+  );
 }
 
 export default SocialLinks;

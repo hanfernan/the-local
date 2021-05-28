@@ -4,5 +4,29 @@
     },
     {
         "genre_name": "Pop"
+    },
+    {
+        "genre_name": "Rap"
+    },
+    {
+        "genre_name": "Jazz"
+    },
+    {
+        "genre_name": "Metal"
+    },
+    {
+        "genre_name": "Punk"
+    },
+    {
+        "genre_name": "Electronic"
+    },
+    {
+        "genre_name": "Hip Hop"
+    },
+    {
+        "genre_name": "Alternative"
+    },
+    {
+        "genre_name": "Country"
     }
 ]

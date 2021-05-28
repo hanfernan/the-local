@@ -5,7 +5,8 @@
         "password": "beatles123",
         "bio": "We are an english rock band",
         "genre_id": 1,
-        "location_id": 1
+        "location_id": 1,
+        "featured_instagram": "https://www.instagram.com/p/CPVW7ILNyZV/"
     },
     {
         "band_name": "Queen",
@@ -13,7 +14,8 @@
         "password": "Queen1234",
         "bio": "We are Queeeen",
         "genre_id": 1,
-        "location_id": 2
+        "location_id": 2,
+        "featured_video": "https://www.youtube.com/watch?v=fJ9rUzIMcZQ"
     },
     {
         "band_name": "No Doubt",
@@ -21,7 +23,8 @@
         "password": "password2",
         "bio": "We're no doubt",
         "genre_id": 2,
-        "location_id": 1
+        "location_id": 1,
+        "youtube": "https://www.youtube.com/channel/UCtJXMyhnbdIQrCSDwAeJlNw"
     },
      {
         "band_name": "Coldplay",
@@ -29,7 +32,8 @@
         "password": "coldplay123",
         "bio": "we're cold",
         "genre_id": 2,
-        "location_id": 2
+        "location_id": 2,
+        "featured_video": "https://www.youtube.com/watch?v=RB-RcX5DS5A"
     },
     {
         "band_name": "Arctic Monkeys",
@@ -37,7 +41,8 @@
         "password": "monkeyss",
         "bio": "we're bananas",
         "genre_id": 2,
-        "location_id": 1
+        "location_id": 1,
+        "featured_video": "https://www.youtube.com/watch?v=CPtDYhGErVc"
     },
      {
         "band_name": "The Rolling Stones",
@@ -45,7 +50,8 @@
         "password": "rollingstones",
         "bio": "they see me rolling",
         "genre_id": 2,
-        "location_id": 2
+        "location_id": 2,
+        "featured_video": "https://www.youtube.com/watch?v=Jwtyn-L-2gQ"
     },
     {
         "band_name": "Shiny Toy Guns",
