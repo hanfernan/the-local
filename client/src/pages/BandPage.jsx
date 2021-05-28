@@ -4,7 +4,6 @@ import { Link, useParams } from "react-router-dom";
 import API from '../utils/API';
 import SocialLinks from "../components/SocialMedia/socialLinks"
 import EmbedVideo from '../components/EmbedVideo'
-import EmbedInstagram from '../components/EmbedInstagram'
 
 function BandPage() {
     const [band, setBand] = useState({
@@ -14,7 +13,8 @@ function BandPage() {
         bio: "",
         location: "",
         genre: "",
-        featured_video: ""
+        featured_video: "",
+        featured_instagram: ""
     })
 
     const {id} = useParams()
@@ -31,7 +31,6 @@ function BandPage() {
             <h2>{band.location.location_name}</h2>
             <h2>{band.bio}</h2>
             <EmbedVideo band = {band} />
-            {/* <EmbedInstagram band = {band} /> */}
             <SocialLinks band = {band}/>
         </div>
     )

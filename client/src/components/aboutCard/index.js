@@ -1,7 +1,7 @@
 import React, {useState, useRef, useEffect} from "react";
 import Row from "../Row";
 import Col from "../Col";
-import API from "../../utils/API"
+import API from "../../utils/API";
 
 
 function AboutCard(props) {
@@ -59,6 +59,7 @@ function AboutCard(props) {
 
     }
     return (
+        
         <div className="card" style={{marginTop:50}}>
             <div class="card-header" style={{fontWeight: "bolder"}}>
                 {state ?
@@ -93,7 +94,7 @@ function AboutCard(props) {
                 </div>}
 
                 {state ?  
-                    <Row>
+                <Row>
                     
                     <Col size="md-6">
                     <div className="form-group">
@@ -136,21 +137,21 @@ function AboutCard(props) {
                     <button style= {{marginTop:20}} onClick={handleFormSubmit}>Submit </button>
                 </Row> :  
                     <Row>
+                        
+                        <Col size="md-6">
+                            <p>Genre: {props.genre}</p>
                     
-                    <Col size="md-6">
-                        <p>Genre: {props.genre}</p>
-                
-                    </Col>
-                    <Col size="md-6">
-                        <p>Location: {props.location}</p>
-                       
-                    </Col>
-                </Row>}
-               
+                        </Col>
+                        <Col size="md-6">
+                            <p>Location: {props.location}</p>
+                        
+                        </Col>
+                   </Row>
+                    }
+                    </div>
+                  </div>
+                );
 
-            </div>
-         </div>
-    )
 }
 
-export default AboutCard;
+ export default AboutCard;
