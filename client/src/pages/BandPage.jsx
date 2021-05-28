@@ -14,7 +14,8 @@ function BandPage() {
         bio: "",
         location: "",
         genre: "",
-        featured_video: ""
+        featured_video: "",
+        featured_instagram: ""
     })
 
     const {id} = useParams()
@@ -31,7 +32,7 @@ function BandPage() {
             <h2>{band.location.location_name}</h2>
             <h2>{band.bio}</h2>
             <EmbedVideo band = {band} />
-            {/* <EmbedInstagram band = {band} /> */}
+            <EmbedInstagram band = {band} />
             <SocialLinks band = {band}/>
         </div>
     )
