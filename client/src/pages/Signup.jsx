@@ -2,13 +2,18 @@ import React, { useEffect, useRef, useState } from "react";
 import API from "../utils/API"
 import "../components/Registration/Registration.css"
 import "../App.css"
-
+import { useHistory } from 'react-router-dom'
+ 
 function Signup(props) {
+
+    const history = useHistory()
+
     const [location, setLocation] = useState("");
     const [genre, setGenre] = useState("");
     const [locationValue, setLocationValue] = useState(1);
     const [genreValue, setGenreValue] = useState(1);
-  
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
+
     useEffect(() => {
       API.getLocations().then((response) => {
         setLocation(response.data);
@@ -39,6 +44,8 @@ function Signup(props) {
         bio: bioRef.current.value,
       });
       console.log(locationValue);
+      history.push('/');
+      setIsLoggedIn(true)
     };
   
     let locationsList =
@@ -52,7 +59,6 @@ function Signup(props) {
       genre.map((item, i) => {
         return <option value={item.id}>{item.genre_name}</option>;
       });
-    // console.log(locationValue)
   
     return (
       <section className="signup-container">
@@ -127,7 +133,7 @@ function Signup(props) {
             />
           </div>
           <div>
-            <button type="submit" className="btn btn-dark">
+            <button type="submit" className="btn btn-dark" >
               SIGN UP
             </button>
           </div>

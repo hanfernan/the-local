@@ -26,9 +26,6 @@ function App() {
   }, [loggedIn])
 
   return (
-    // if (!logged_in) {
-    //   return < Redirect to= "/login"/> 
-    // }
     <div className="App">
       <Router>
         <Navbar />
