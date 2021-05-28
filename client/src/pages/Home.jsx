@@ -17,16 +17,20 @@ function Home () {
                 <UpcomingEvents />                
             </div>            
             <div className="registration-container">
-                <div>
-                    <button class="btn btn-dark" onClick={() => history.push('/login')}>
+            <div className="card p-3">
+                    <h3 className="card-title">Are you in a band?</h3>
+                    <p className="card-text">Sign up here to get started!</p>
+                    <button className="btn btn-secondary" onClick={() => history.push('/signup')}>
+                    Signup
+                    </button>
+                </div>
+                <div className="card p-3">
+                    <h3 className="card-title">Returning User?</h3>
+                    <button className="btn btn-dark" onClick={() => history.push('/login')}>
                     Login
                     </button>
                 </div>
-                    
-                 
-            <button onClick={() => history.push('/signup')}>
-                Signup
-            </button>
+                                             
             </div>
         </div>
     
