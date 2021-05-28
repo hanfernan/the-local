@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom"
 import Login from "../components/Registration/Login";
 import Signup from "../components/Registration/Signup";
 import UpcomingEvents from "../components/UpcomingEvents/UpcomingEvents"
@@ -10,7 +11,9 @@ import API from '../utils/API'
 //get request for events based on location id
 
 function Home () {
-    
+
+    const history = useHistory()
+
     return (
         <div className="home-container">
             <div className="col">
@@ -18,10 +21,10 @@ function Home () {
                 <UpcomingEvents />                
             </div>            
             <div className="registration-container">
-            <button>
+            <button onClick={() => history.push('/login')}>
                 Login
             </button>
-            <button>
+            <button onClick={() => history.push('/signup')}>
                 Signup
             </button>
             </div>
