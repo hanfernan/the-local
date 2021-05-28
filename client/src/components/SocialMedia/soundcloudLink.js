@@ -1,13 +1,13 @@
 import React from "react";
 import "./socialLinks.css";
 
-function InstagramLink(props) {
-  if (props.band.instagram) {
+function SoundcloudLink(props) {
+  if (props.band.soundcloud) {
     return (
       <a
-        href={props.band.instagram}
+        href={props.band.soundcloud}
         target="__blank"
-        className="fa fa-instagram"
+        className="fa fa-soundcloud"
       >
         {" "}
       </a>
@@ -17,4 +17,4 @@ function InstagramLink(props) {
   }
 }
 
-export default InstagramLink;
+export default SoundcloudLink;
