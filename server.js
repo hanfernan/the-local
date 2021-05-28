@@ -8,7 +8,6 @@ const routes = require('./controllers')
 
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
-const PORT = process.env.PORT || 3001;
 
 const sess = {
   secret: "Super secret secret",
