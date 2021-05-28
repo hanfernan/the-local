@@ -68,6 +68,12 @@ const API = {
   getUserBand: (id) => {
     return axios.get("/api/banduser/" + id);
   },
+  getLoggedIn: () => {
+    return axios.get("/api/banduser/isloggedin")
+  },
+  logOut: () => {
+    return axios.post("api/banduser/logout")
+  }
 };
 
 export default API;

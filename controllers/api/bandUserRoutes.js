@@ -11,7 +11,7 @@ router.post("/", async (req, res) => {
     req.session.save(() => {
       req.session.band_id = bandData.id;
       req.session.logged_in = true;
-      loggedIn = bandData.data.id;
+      loggedIn = bandData.id;
 
       res.status(200).json(bandData);
     });
@@ -52,6 +52,34 @@ router.post("/login", async (req, res) => {
     });
   } catch (err) {
     res.status(400).json(err);
+  }
+})
+
+router.get("/isloggedin", (req, res) => {
+  console.log("logged in ", req.session.logged_in)
+  if (req.session.logged_in) {
+    res.json({
+      logged_in: true,
+      clare: "yes",
+      request: req.session
+    })
+  } else {
+    res.json({
+      logged_in: false,
+      peter: "no",
+      request: req.session
+    })
+  }
+})
+
+router.post('/logout', (req, res) => {
+  console.log(req.session.logged_in)
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.status(204).end()
+    })
+  } else {
+    res.json("already logged out")
   }
 })
 

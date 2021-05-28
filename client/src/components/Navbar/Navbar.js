@@ -1,14 +1,30 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Nav.css";
+import API from "../../utils/API"
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
-function Nav() {
+function Nav(props) {
   const [click, setClick] = useState(false);
 
   //reverses state of menu
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
+  const logOut = () => {
+    API.logOut()
+      .then(
+        (res) => {
+          console.log(res.data)
+          props.setLoggedIn(false)
+        closeMobileMenu()
+        }
+      )
+      .catch(
+        (err) => console.log(err)
+      )
+  }
+
   return (
     <>
       <nav className="navbar">
@@ -32,7 +48,7 @@ function Nav() {
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='/logout' onClick={closeMobileMenu} className='nav-links'>
+              <Link to='/login' onClick={logOut} className='nav-links'>
                 Logout
               </Link>
             </li>            
