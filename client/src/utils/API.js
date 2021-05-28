@@ -47,8 +47,8 @@ const API = {
   deleteBand: (id) => {
     return axios.get("/api/bands/" + id);
   },
-  updateBand: (id, bandUpdateData) => {
-    return axios.put("/api/bands/" + id, bandUpdateData);
+  updateBand: (id, ...bandUpdateData) => {
+    return axios.put("/api/bands/" + id, ...bandUpdateData);
   },
   getGenres: () => {
     return axios.get("/api/genres");
@@ -59,8 +59,8 @@ const API = {
   createGenre: () => {
     return axios.post("/api/genres");
   },
-  updateGenre: (id) => {
-    return axios.put("/api/genres/" + id);
+  updateGenre: (id, genreUpdate) => {
+    return axios.put("/api/genres/" + id, genreUpdate);
   },
   deleteGenre: (id) => {
     return axios.delete("/api/genres/" + id);
