@@ -18,8 +18,12 @@ function Home () {
                 <UpcomingEvents />                
             </div>            
             <div className="registration-container">
-                {/* <Login /> 
-                <Signup /> */}
+            <button>
+                Login
+            </button>
+            <button>
+                Signup
+            </button>
             </div>
         </div>
     
