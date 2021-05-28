@@ -4,6 +4,7 @@ import Col from "../Col";
 import API from "../../utils/API";
 
 function AboutCard(props) {
+
   const [state, editState] = useState(false);
 
   // handleFormSubmit = (e) => {
