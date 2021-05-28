@@ -5,10 +5,6 @@ import Signup from "../components/Registration/Signup";
 import UpcomingEvents from "../components/UpcomingEvents/UpcomingEvents"
 import FeaturedBand from "../components/FeaturedBand/FeaturedBand"
 import "../App.css"
-import API from '../utils/API'
-
-//get request for featured band
-//get request for events based on location id
 
 function Home () {
 
@@ -21,9 +17,13 @@ function Home () {
                 <UpcomingEvents />                
             </div>            
             <div className="registration-container">
-            <button onClick={() => history.push('/login')}>
-                Login
-            </button>
+                <div>
+                    <button class="btn btn-dark" onClick={() => history.push('/login')}>
+                    Login
+                    </button>
+                </div>
+                    
+                 
             <button onClick={() => history.push('/signup')}>
                 Signup
             </button>
