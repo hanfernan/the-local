@@ -47,8 +47,8 @@ const API = {
     deleteBand: (id) => {
         return axios.get('/api/bands/' + id)
     },
-    updateBand: (id) => {
-        return axios.put('/api/bands/', + id)
+    updateBand: (id,body) => {
+        return axios.put('/api/bands/' + id, body)
     },
     getGenres: () => {
         return axios.get('/api/genres')
