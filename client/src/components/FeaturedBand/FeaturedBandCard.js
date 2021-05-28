@@ -9,7 +9,7 @@ function FeaturedBandCard(props) {
     return (
         <>
             <div className="feat-band-container card">
-                <div className="card-header">Featured Band</div>
+                <h2 className="card-header">Featured Band</h2>
                 <h3 className="card-title">{props.band.band_name}</h3>
                 {/* <h5 className="card-subtitle">Location: </h5> */}
                 {/* <h5 className="card-subtitle">Location: {props.band.genre.genre_name} </h5> */}

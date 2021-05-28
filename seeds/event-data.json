@@ -25,6 +25,49 @@
         "event_date": "06-12-2021",
         "event_link": "www.yahoo.com",
         "location_id": 2,
-        "band_id": 5
-    }
+        "band_id": 6
+    },
+    {
+        "event_name": "Dance For The Cure",
+        "event_date": "10-12-2021",
+        "event_link": "www.yahoo.com",
+        "location_id": 2,
+        "band_id": 7
+    },
+    {
+        "event_name": "Fyre Festival",
+        "event_date": "08-29-2021",
+        "event_link": "www.google.com",
+        "location_id": 1,
+        "band_id": 1
+    },
+    {
+        "event_name": "Back From The Dead!",
+        "event_date": "06-02-2021",
+        "event_link": "www.yahoo.com",
+        "location_id": 2,
+        "band_id": 4
+    },
+    {
+        "event_name": "Jamfest 2022",
+        "event_date": "09-07-202",
+        "event_link": "www.yahoo.com",
+        "location_id": 2,
+        "band_id": 7
+    },
+    {
+        "event_name": "Now That's What I Call Music!",
+        "event_date": "07-19-2021",
+        "event_link": "www.yahoo.com",
+        "location_id": 2,
+        "band_id": 7
+    },
+    {
+        "event_name": "Battle of the Bands",
+        "event_date": "12-12-2022",
+        "event_link": "www.yahoo.com",
+        "location_id": 2,
+        "band_id": 2
+    },
+
 ]

@@ -26,6 +26,7 @@ function Home () {
                 </div>
                 <div className="card p-3">
                     <h3 className="card-title">Returning User?</h3>
+                    <p className="card-text">Log in here!</p>
                     <button className="btn btn-dark" onClick={() => history.push('/login')}>
                     Login
                     </button>
