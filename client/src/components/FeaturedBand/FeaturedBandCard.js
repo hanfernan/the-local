@@ -18,8 +18,11 @@ function FeaturedBandCard(props) {
                 {/* <h5 className="card-subtitle">Location: {props.band.genre.genre_name} </h5> */}
                 {/* <h5 className="card-subtitle">Genre: </h5> */}
                 {/* <h5 className="card-subtitle">Genre: {props.band.location} </h5> */}
-                <p className="card-text fb-text"> About: {props.band.bio}</p>
-                <button>Check them out here</button>
+                <h4 className="card-subtitle fb-subtitle">About:</h4>
+                <p className="card-text fb-text">{props.band.bio}</p>
+                <a className= "fb-button" href={`/bandpage/${props.band.band_id}`}>
+                    <button className="btn btn-primary">Check them out here</button>
+                </a>
             </div>
         </>
     )

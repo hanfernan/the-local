@@ -1,6 +1,7 @@
 .fb-container {
   padding: 5px;
   margin-top: 30px;
+  margin-bottom: 50px;
   background: none;
   border: none;
 }
@@ -21,7 +22,6 @@
   font-size: 40px;
   padding: 10px 10px 10px 50px;
   color: rgba(5, 19, 101, 1);
-  
 }
 
 .fb-link:hover {
@@ -34,8 +34,20 @@
 .fb-img {
   width: 70%;
   margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+.fb-subtitle {
+  margin-left: 50px;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 30px;
 }
 .fb-text {
   margin-left: 50px;
   padding-top: 10px;
+  font-size: 18px;
+}
+
+.fb-button {
+    margin-left: 50px;
 }
