@@ -1,6 +1,5 @@
 import React from "react";
 import "./UpcomingEvents.css";
-import { Link } from "react-router-dom";
 
 function UpcomingEventsTable(props) {
   function formatDate(date) {
