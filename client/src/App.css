@@ -1,5 +1,6 @@
 * {
-  font-family: 'Roboto', sans-serif;;
+  font-family: 'Roboto', sans-serif;
+ 
 }
 .home-container {
   display: flex;
@@ -7,6 +8,7 @@
   flex-direction: row;
   padding: 15px;
   width: 100%;
+  background: #fafafa ;
 }
 .registration-container {
   display: flex;
