@@ -1,4 +1,12 @@
-.uc-header{
-    font-family: 'Titillium Web', sans-serif;
-    font-style: italic;
+.uc-header {
+  font-family: "Titillium Web", sans-serif;
+  font-style: italic;
+  padding-bottom: 2px;
+  border-bottom-style: solid;
+  border-color: black;
+  border-width: 2px;
+}
+
+.event-top{
+    border-top-style: none;
 }

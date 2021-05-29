@@ -40,7 +40,7 @@ function UpcomingEventsTable(props) {
   return (
     <section className="upcoming-events-container">
       <h2 className="uc-header">Upcoming Events</h2>
-      <table className="table table-hover table-condensed">
+      <table className="table table-hover table-condensed event-top">
         <thead>
           <tr>
             <th scope="col">Event Name</th>

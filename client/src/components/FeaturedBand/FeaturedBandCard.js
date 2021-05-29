@@ -9,8 +9,8 @@ function FeaturedBandCard(props) {
     return (
         <>
             <div className="fb-container card">
-                <h2 className="card-header fb-header">FEATURED BAND</h2>
-                <a href={`/bandpage/${props.band.band_id}`}>
+                <h2 className="card-header fb-header"> <i class="fas fa-headphones-alt"/> FEATURED BAND</h2>
+                <a className= "fb-link" href={`/bandpage/${props.band.band_id}`}>
                     <h3 className="card-title fb-title">{props.band.band_name}</h3>
                 </a>
                 <img className="card-img fb-img" src="https://roamilicious.com/wp-content/uploads/2016/07/atlanta-concert-venue-terminal-west.jpeg" alt="placeholder venue" />
@@ -18,7 +18,8 @@ function FeaturedBandCard(props) {
                 {/* <h5 className="card-subtitle">Location: {props.band.genre.genre_name} </h5> */}
                 {/* <h5 className="card-subtitle">Genre: </h5> */}
                 {/* <h5 className="card-subtitle">Genre: {props.band.location} </h5> */}
-                <p className="card-text fb-text"> Bio: {props.band.bio}</p>
+                <p className="card-text fb-text"> About: {props.band.bio}</p>
+                <button>Check them out here</button>
             </div>
         </>
     )
