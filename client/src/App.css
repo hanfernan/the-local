@@ -1,3 +1,6 @@
+* {
+  font-family: 'Roboto', sans-serif;;
+}
 .home-container {
   display: flex;
   flex-wrap: wrap;

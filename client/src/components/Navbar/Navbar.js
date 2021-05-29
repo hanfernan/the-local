@@ -30,7 +30,8 @@ function Nav(props) {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" onClick={closeMobileMenu} className="navbar-logo">
-            The Local <i className='fas fa-music' />
+            The Local 
+            {/* <i className='fas fa-music' /> */}
           </Link>
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
