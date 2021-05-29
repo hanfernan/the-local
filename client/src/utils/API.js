@@ -32,8 +32,8 @@ const API = {
   getSingleEvent: () => {
     return axios.get("/api/events/:id");
   },
-  postEvent: () => {
-    return axios.post("/api/events");
+  postEvent: (eventData) => {
+    return axios.post("/api/events", eventData);
   },
   deleteEvent: (id) => {
     return axios.delete("/api/events/" + id);
@@ -69,11 +69,11 @@ const API = {
     return axios.get("/api/banduser/" + id);
   },
   getLoggedIn: () => {
-    return axios.get("/api/banduser/isloggedin")
+    return axios.get("/api/banduser/isloggedin");
   },
   logOut: () => {
-    return axios.post("api/banduser/logout")
-  }
+    return axios.post("api/banduser/logout");
+  },
 };
 
 export default API;
