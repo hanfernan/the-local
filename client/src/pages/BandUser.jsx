@@ -19,7 +19,7 @@ function BandUser () {
     })
 
     useEffect(() => {
-        API.getUserBand(1).then(band => {
+        API.getUserBand().then(band => {
             console.log(band)
             console.log(band.data);
             console.log(band.data.id)
