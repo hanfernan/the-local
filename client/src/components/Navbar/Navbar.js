@@ -36,7 +36,6 @@ function Nav(props) {
             </Link>
           </li>
           <li className="nav-item">
-            {/* TODO: link to specific band profile based on ID */}
             <Link to="/band" onClick={closeMobileMenu} className="nav-links">
               Edit Band Profile
             </Link>
