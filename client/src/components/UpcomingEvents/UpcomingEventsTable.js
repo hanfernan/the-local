@@ -39,7 +39,7 @@ function UpcomingEventsTable(props) {
 
   return (
     <section className="upcoming-events-container">
-      <h2>Upcoming Events</h2>
+      <h2 className="uc-header">Upcoming Events</h2>
       <table className="table table-hover table-condensed">
         <thead>
           <tr>
