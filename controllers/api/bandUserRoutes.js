@@ -48,7 +48,7 @@ router.post("/login", async (req, res) => {
       req.session.band_id = bandData.id;
       req.session.logged_in = true;
 
-      res.json({ band: bandData, message: "You are now logged in!" });
+      res.json({ band: bandData, message: "You are now logged in!", logged_in:true});
     });
   } catch (err) {
     res.status(400).json(err);
