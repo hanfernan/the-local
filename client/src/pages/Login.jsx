@@ -114,10 +114,10 @@ function Login() {
             />
           </div>
           <div>
-            <button className="btn btn-dark" type="submit">
+            <button className="btn btn-dark login-btn" type="submit">
               LOGIN
             </button>
-            <button type="link" onClick={()=> setIsLoggedIn(false)}>
+            <button className="btn btn-dark" type="link" onClick={()=> setIsLoggedIn(false)}>
                 Need to signup? Click here
             </button>
           </div>
