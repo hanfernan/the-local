@@ -17,7 +17,7 @@ function Home () {
             <div className="registration-container">
                 <div className="card p-3 reg-card">
                     <h3 className="card-title reg-heading">Are you in a band?</h3>
-                    <p className="card-text">Sign up here to get started!</p>
+                    <p className="card-text">Click here to get started!</p>
                     <button className="btn btn-secondary" onClick={() => history.push('/signup')}>
                     Signup
                     </button>

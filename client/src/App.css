@@ -24,8 +24,8 @@
 
 .reg-heading {
   font-family: "Titillium Web", sans-serif;
-  font-style: italic;
-  font-size: 20px;
+  /* font-style: italic; */
+  font-size: 30px;
 }
 
 .reg-card{
