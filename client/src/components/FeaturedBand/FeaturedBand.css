@@ -1,0 +1,53 @@
+.fb-container {
+  padding: 5px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  background: none;
+  border: none;
+}
+
+.fb-header {
+  font-family: "Titillium Web", sans-serif;
+  font-style: italic;
+  font-size: 30px;
+  padding: 0;
+  background-color: #fafafa;
+  border-bottom-style: solid;
+  border-color: black;
+  border-width: 2px;
+}
+
+.fb-title {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 40px;
+  padding: 10px 10px 10px 50px;
+  color: rgba(5, 19, 101, 1);
+}
+
+.fb-link:hover {
+  text-decoration: none;
+  color: rgba(13, 42, 223, 1);
+  text-shadow: 2px 2px 3px #9eb3c2;
+  transition: all 0.2s ease-out;
+}
+
+.fb-img {
+  width: 70%;
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+.fb-subtitle {
+  margin-left: 50px;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 30px;
+}
+.fb-text {
+  margin-left: 50px;
+  padding-top: 10px;
+  font-size: 18px;
+}
+
+.fb-button {
+    margin-left: 50px;
+}

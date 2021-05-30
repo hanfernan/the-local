@@ -60,5 +60,13 @@
         "bio": "We're the dreams you believe in",
         "genre_id": 1,
         "location_id": 2
+    },
+    {
+        "band_name": "Run The Jewels",
+        "email": "rtj@rtj.com",
+        "password": "password",
+        "bio": "Yankee and the Brave",
+        "genre_id": 6,
+        "location_id": 4
     }
 ]

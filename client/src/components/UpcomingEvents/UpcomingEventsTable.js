@@ -38,8 +38,8 @@ function UpcomingEventsTable(props) {
 
   return (
     <section className="upcoming-events-container">
-      <h2>Upcoming Events</h2>
-      <table className="table table-hover table-condensed">
+      <h2 className="uc-header"><i class="far fa-calendar-check"/> UPCOMING EVENTS</h2>
+      <table className="table table-hover table-condensed event-top">
         <thead>
           <tr>
             <th scope="col">Event Name</th>
