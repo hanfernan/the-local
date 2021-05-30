@@ -30,7 +30,7 @@
         "band_name": "Coldplay",
         "email": "coldplay@band.com",
         "password": "coldplay123",
-        "bio": "Coldplay are a British rock band formed in London in 1996.[1][2] Vocalist, rhythm guitarist and pianist Chris Martin, lead guitarist Jonny Buckland, bassist Guy Berryman, and drummer Will Champion met at University College London and began playing music together from 1996 to 1998, first calling themselves Pectoralz and then Starfish before finally changing their name to Coldplay.",
+        "bio": "Coldplay are a British rock band formed in London in 1996. Vocalist, rhythm guitarist and pianist Chris Martin, lead guitarist Jonny Buckland, bassist Guy Berryman, and drummer Will Champion met at University College London.",
         "genre_id": 2,
         "location_id": 2,
         "featured_video": "https://www.youtube.com/watch?v=RB-RcX5DS5A"
@@ -48,7 +48,7 @@
         "band_name": "The Rolling Stones",
         "email": "rolling@band.com",
         "password": "rollingstones",
-        "bio": "The Rolling Stones are an English rock band formed in London in 1962. Diverging from the pop rock of the early-1960s, the Rolling Stones pioneered the gritty, heavier-driven sound that came to define hard rock.[1] Their first stable line-up was vocalist Mick Jagger, multi-instrumentalist Brian Jones, guitarist Keith Richards, drummer Charlie Watts, and bassist Bill Wyman.",
+        "bio": "The Rolling Stones are an English rock band formed in London in 1962. Their first stable line-up was vocalist Mick Jagger, multi-instrumentalist Brian Jones, guitarist Keith Richards, drummer Charlie Watts, and bassist Bill Wyman.",
         "genre_id": 2,
         "location_id": 2,
         "featured_video": "https://www.youtube.com/watch?v=Jwtyn-L-2gQ"
@@ -57,7 +57,7 @@
         "band_name": "Shiny Toy Guns",
         "email": "littleboys@littletoys.com",
         "password": "password",
-        "bio": "Shiny Toy Guns is an American rock band formed in Los Angeles, California in 2002. The band is composed of guitarist/vocalist Chad Petree, vocalist Carah Faye Charnow, keyboardist Jeremy Dawson, and drummer Mikey Martin. Their first studio album We Are Pilots (2006) had three singles peak inside the top 30 in the Alternative Songs Chart and was nominated for Best Electronic/Dance Album at the 50th Grammy Awards.",
+        "bio": "Shiny Toy Guns is an American rock band formed in Los Angeles, California in 2002. The band is composed of guitarist/vocalist Chad Petree, vocalist Carah Faye Charnow, keyboardist Jeremy Dawson, and drummer Mikey Martin.",
         "genre_id": 1,
         "location_id": 2,
         "featured_video": "https://www.youtube.com/watch?v=jJH38M723aU"
@@ -66,7 +66,7 @@
         "band_name": "Run The Jewels",
         "email": "rtj@rtj.com",
         "password": "password",
-        "bio": "Run the Jewels, also known by the initialism RTJ, is an American hip hop supergroup duo consisting of Brooklyn-based rapper and producer El-P and Atlanta-based rapper Killer Mike. They released their critically acclaimed self-titled debut studio album as a free download in 2013 and have since released the follow-up albums Run the Jewels 2 (2014), Run the Jewels 3 (2016), and RTJ4 (2020),[a] all of which have been released for free and received similar acclaim.",
+        "bio": "Run the Jewels, also known by the initialism RTJ, is an American hip hop supergroup duo consisting of Brooklyn-based rapper and producer El-P and Atlanta-based rapper Killer Mike.",
         "genre_id": 6,
         "location_id": 4,
         "featured_video": "https://www.youtube.com/watch?v=Sff7Kc77QAY"
