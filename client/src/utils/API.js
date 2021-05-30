@@ -29,8 +29,8 @@ const API = {
   getEvents: () => {
     return axios.get("/api/events");
   },
-  getSingleEvent: () => {
-    return axios.get("/api/events/:id");
+  getSingleEvent: (id) => {
+    return axios.get("/api/events/:id", id);
   },
   postEvent: (eventData) => {
     return axios.post("/api/events", eventData);
