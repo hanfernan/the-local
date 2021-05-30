@@ -23,7 +23,7 @@ function UpcomingEventsTable(props) {
     return (
       <tr key={i}>
         <td>
-          <a href={`/eventpage/${event.id}`} target="_blank">
+          <a href={`/eventpage/${event.id}`} target="_blank" rel="noreferrer">
             {event.event_name}
           </a>
         </td>

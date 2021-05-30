@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { Link, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import API from '../utils/API'
 
 function EventPage(props) {
@@ -24,15 +24,18 @@ function EventPage(props) {
                 console.log(err))
             
     }, [id])
+    
 
     return (
         <div>
-            <p>{event.band.band_name}</p>
             <h1>{event.event_name}</h1>
-            <p>{event.event_date}</p>
-            <p>{event.event_link}</p>
-            <p>{event.location.location_name}</p>
-            <p></p>
+            <h2>Featured Band:</h2>
+            <h4>{event.band.band_name}</h4> 
+            <h2>Event Date:</h2>           
+            <h4>{event.event_date}</h4>
+            <h2>Event Location:</h2>
+            <h4>{event.location.location_name}</h4>
+            <p>{event.event_link}</p>            
         </div>
     )
 }

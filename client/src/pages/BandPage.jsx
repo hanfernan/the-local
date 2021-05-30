@@ -1,6 +1,6 @@
 //get request for band info by band id
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "../App.css"
 import API from '../utils/API';
 import SocialLinks from "../components/SocialMedia/socialLinks"
