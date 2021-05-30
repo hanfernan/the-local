@@ -1,7 +1,8 @@
 * {
   font-family: "Roboto", sans-serif;
 }
-.home-container {
+.home-container,
+.band-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -9,13 +10,12 @@
   width: 100%;
   background: #fafafa;
 }
-.registration-container {  
+.registration-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   width: 30%;
   margin-top: 30px;
-  
 }
 
 .upcoming-events-container {
@@ -28,20 +28,43 @@
   font-size: 30px;
 }
 
-.reg-card{
-  margin-top: 50px;;
+.reg-card {
+  margin-top: 50px;
 }
 
-.login-container{
+.login-container {
   background: #fafafa;
   padding: 50px 200px 350px 200px;
 }
 
-.login-btn{
+.login-btn {
   margin-right: 15px;
 }
 
-.signup-container{
+.signup-container {
   background: #fafafa;
   padding: 50px 200px 200px 200px;
+}
+
+.band-header {
+  font-size: 50px;
+}
+
+.band-info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 50%;
+}
+
+.band-media {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 40%;
+}
+
+.band-title {
+  font-family: "Titillium Web", sans-serif;
+  font-style: italic;
 }

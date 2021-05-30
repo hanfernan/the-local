@@ -8,7 +8,7 @@ function EmbedVideo(props) {
 
     return (
       <div>
-        <h2>Featured video:</h2>
+        <h2 className="card-title band-title">Featured video:</h2>
         <div>
           <iframe
             width="560"
