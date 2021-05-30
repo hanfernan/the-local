@@ -3,7 +3,7 @@
         "band_name": "The Beatles",
         "email": "beatles@beatles.com",
         "password": "beatles123",
-        "bio": "We are an english rock band",
+        "bio": "The Beatles were an English rock band formed in Liverpool in 1960. The group, whose best-known line-up comprised John Lennon, Paul McCartney, George Harrison and Ringo Starr, are regarded as the most influential band of all time.",
         "genre_id": 1,
         "location_id": 1,
         "featured_instagram": "https://www.instagram.com/p/CPVW7ILNyZV/"
@@ -12,7 +12,7 @@
         "band_name": "Queen",
         "email": "queen@band.com",
         "password": "Queen1234",
-        "bio": "We are Queeeen",
+        "bio": "Queen are a British rock band formed in London in 1970. Their classic line-up was Freddie Mercury (lead vocals, piano), Brian May (guitar, vocals), Roger Taylor (drums, vocals) and John Deacon (bass).",
         "genre_id": 1,
         "location_id": 2,
         "featured_video": "https://www.youtube.com/watch?v=fJ9rUzIMcZQ"
@@ -21,7 +21,7 @@
         "band_name": "No Doubt",
         "email": "Gwen@band.com",
         "password": "password2",
-        "bio": "We're no doubt",
+        "bio": "No Doubt is an American rock band from Anaheim, California, formed in 1986. The band consists of vocalist Gwen Stefani, guitarist Tom Dumont, bassist Tony Kanal, and drummer Adrian Young.",
         "genre_id": 2,
         "location_id": 1,
         "youtube": "https://www.youtube.com/channel/UCtJXMyhnbdIQrCSDwAeJlNw"
@@ -30,7 +30,7 @@
         "band_name": "Coldplay",
         "email": "coldplay@band.com",
         "password": "coldplay123",
-        "bio": "we're cold",
+        "bio": "Coldplay are a British rock band formed in London in 1996. Vocalist, rhythm guitarist and pianist Chris Martin, lead guitarist Jonny Buckland, bassist Guy Berryman, and drummer Will Champion met at University College London.",
         "genre_id": 2,
         "location_id": 2,
         "featured_video": "https://www.youtube.com/watch?v=RB-RcX5DS5A"
@@ -39,7 +39,7 @@
         "band_name": "Arctic Monkeys",
         "email": "monkeys@band.com",
         "password": "monkeyss",
-        "bio": "we're bananas",
+        "bio": "Arctic Monkeys are an English rock band formed in Sheffield in 2002. The group consists of Alex Turner (lead vocals, guitar, keyboards), Jamie Cook (guitar, keyboards), Nick O'Malley (bass guitar, backing vocals), and Matt Helders (drums, backing vocals).",
         "genre_id": 2,
         "location_id": 1,
         "featured_video": "https://www.youtube.com/watch?v=CPtDYhGErVc"
@@ -48,7 +48,7 @@
         "band_name": "The Rolling Stones",
         "email": "rolling@band.com",
         "password": "rollingstones",
-        "bio": "they see me rolling",
+        "bio": "The Rolling Stones are an English rock band formed in London in 1962. Their first stable line-up was vocalist Mick Jagger, multi-instrumentalist Brian Jones, guitarist Keith Richards, drummer Charlie Watts, and bassist Bill Wyman.",
         "genre_id": 2,
         "location_id": 2,
         "featured_video": "https://www.youtube.com/watch?v=Jwtyn-L-2gQ"
@@ -57,16 +57,18 @@
         "band_name": "Shiny Toy Guns",
         "email": "littleboys@littletoys.com",
         "password": "password",
-        "bio": "We're the dreams you believe in",
+        "bio": "Shiny Toy Guns is an American rock band formed in Los Angeles, California in 2002. The band is composed of guitarist/vocalist Chad Petree, vocalist Carah Faye Charnow, keyboardist Jeremy Dawson, and drummer Mikey Martin.",
         "genre_id": 1,
-        "location_id": 2
+        "location_id": 2,
+        "featured_video": "https://www.youtube.com/watch?v=jJH38M723aU"
     },
     {
         "band_name": "Run The Jewels",
         "email": "rtj@rtj.com",
         "password": "password",
-        "bio": "Yankee and the Brave",
+        "bio": "Run the Jewels, also known by the initialism RTJ, is an American hip hop supergroup duo consisting of Brooklyn-based rapper and producer El-P and Atlanta-based rapper Killer Mike.",
         "genre_id": 6,
-        "location_id": 4
+        "location_id": 4,
+        "featured_video": "https://www.youtube.com/watch?v=Sff7Kc77QAY"
     }
 ]

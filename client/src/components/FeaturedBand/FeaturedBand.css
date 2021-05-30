@@ -6,7 +6,9 @@
   border: none;
 }
 
-.fb-header {
+.fb-header,
+.band-header,
+.event-header {
   font-family: "Titillium Web", sans-serif;
   font-style: italic;
   font-size: 30px;
@@ -49,5 +51,5 @@
 }
 
 .fb-button {
-    margin-left: 50px;
+  margin-left: 50px;
 }

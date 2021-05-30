@@ -13,7 +13,7 @@ function SocialLinks(props) {
       <div>
         <YoutubeLink band={props.band} />
       </div>
-      <h3>Follow us:</h3>
+      <h3 className="card-title band-title">Follow us:</h3>
       <div>
         <FacebookLink band={props.band} />
         <SecondYoutubeLink band={props.band} />
