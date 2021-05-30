@@ -31,3 +31,17 @@
 .reg-card{
   margin-top: 50px;;
 }
+
+.login-container{
+  background: #fafafa;
+  padding: 50px 200px 350px 200px;
+}
+
+.login-btn{
+  margin-right: 15px;
+}
+
+.signup-container{
+  background: #fafafa;
+  padding: 50px 200px 200px 200px;
+}
