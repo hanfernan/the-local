@@ -8,13 +8,13 @@ function YoutubeLink(props) {
 
   if (props.band.youtube) {
     return (
-      <a href={props.band.youtube} target="__blank" className="fa fa-youtube">
+      <a href={props.band.youtube} target="__blank" rel="noreferrer" className="fa fa-youtube">
         {" "}
       </a>
     );
   } else {
     return (
-      <a href={concatenatedWithQuery} target="_blank" className="fa fa-youtube">
+      <a href={concatenatedWithQuery} target="_blank" rel="noreferrer" className="fa fa-youtube">
         {" "}
       </a>
     );

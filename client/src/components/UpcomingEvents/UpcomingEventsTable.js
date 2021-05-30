@@ -19,11 +19,11 @@ function UpcomingEventsTable(props) {
   });
 
   const events = sortedEvents.map((event, i) => {
-    console.log(event.id);
+    // console.log(event.id);
     return (
       <tr key={i}>
         <td>
-          <a href={`/eventpage/${event.id}`} target="_blank">
+          <a href={`/eventpage/${event.id}`} target="_blank" rel="noreferrer">
             {event.event_name}
           </a>
         </td>
@@ -38,8 +38,8 @@ function UpcomingEventsTable(props) {
 
   return (
     <section className="upcoming-events-container">
-      <h2>Upcoming Events</h2>
-      <table className="table table-hover table-condensed">
+      <h2 className="uc-header"><i className="far fa-calendar-check"/> UPCOMING EVENTS</h2>
+      <table className="table table-hover table-condensed event-top">
         <thead>
           <tr>
             <th scope="col">Event Name</th>

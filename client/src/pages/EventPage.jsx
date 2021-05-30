@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { Link, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import API from '../utils/API'
 
 function EventPage(props) {
@@ -24,15 +24,23 @@ function EventPage(props) {
                 console.log(err))
             
     }, [id])
+    
 
     return (
-        <div>
-            <p>{event.band.band_name}</p>
-            <h1>{event.event_name}</h1>
-            <p>{event.event_date}</p>
-            <p>{event.event_link}</p>
-            <p>{event.location.location_name}</p>
-            <p></p>
+        <div className="card">
+            <h1 className="card-header event-header">{event.event_name}</h1>
+            <div className="event-container">
+                <h2 className="card-title event-title">Featured Band:</h2>
+                <a href={`/bandpage/${event.band.id}`} target="_blank" rel="noreferrer" className= "fb-link" >
+                    <h4 className="card-subtitle event-subtitle">{event.band.band_name}</h4> 
+                </a>                
+                <h2 className="card-title event-title">Event Date:</h2>           
+                <h4 className="card-subtitle event-subtitle">{event.event_date}</h4>
+                <h2 className="card-title event-title">Event Location:</h2>
+                <h4 className="card-subtitle event-subtitle">{event.location.location_name}</h4>
+                <a href={`http://${event.event_link}`} target="_blank" rel="noreferrer" > View more event details here</a> 
+            </div>
+                      
         </div>
     )
 }
