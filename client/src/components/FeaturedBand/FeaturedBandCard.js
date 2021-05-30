@@ -6,7 +6,7 @@ function FeaturedBandCard(props) {
     return (
         <>
             <div className="fb-container card">
-                <h2 className="card-header fb-header"> <i class="fas fa-headphones-alt"/> FEATURED BAND</h2>
+                <h2 className="card-header fb-header"> <i className="fas fa-headphones-alt"/> FEATURED BAND</h2>
                 <a href={`/bandpage/${props.band.id}`} target="_blank" rel="noreferrer" className= "fb-link" >
                     <h3 className="card-title fb-title">{props.band.band_name}</h3>
                 </a>

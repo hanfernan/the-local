@@ -61,7 +61,7 @@ function AboutCard(props) {
     return (
         
         <div className="card" style={{marginTop:50}}>
-            <div class="card-header" style={{fontWeight: "bolder"}}>
+            <div className="card-header" style={{fontWeight: "bolder"}}>
                 {state ?
                 <Row>
                     <Col size="md-9">
@@ -84,7 +84,7 @@ function AboutCard(props) {
                 
                 
             </div>
-            <div class="card-body">
+            <div className="card-body">
                 {state ?
                 <div>
                     <input placeholder={props.bio} ref={bioRef} onChange={(e)=>setValue({...value, bio: e.target.value})}/>
