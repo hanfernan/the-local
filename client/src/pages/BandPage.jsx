@@ -5,6 +5,7 @@ import "../App.css"
 import API from '../utils/API';
 import SocialLinks from "../components/SocialMedia/socialLinks"
 import EmbedVideo from '../components/EmbedVideo'
+import UserEventsTable from "../components/UpcomingEvents/UserEventTable"
 
 function BandPage() {
     const [band, setBand] = useState({
@@ -39,8 +40,10 @@ function BandPage() {
                 <h5 className="card-text">{band.bio}</h5>
             </div>
             <div className="band-media">
+            <UserEventsTable id={band.id}/>
                 <EmbedVideo band = {band} />
                 <SocialLinks band = {band}/>
+                
             </div>     
             </div>
                               

@@ -5,9 +5,7 @@ function UserEvents(props) {
   const [userEvents, setUserEvents] = useState([]);
 
   useEffect(() => {
-    // console.log(props, props.id, "hello");
     API.getEventById(props.id).then((res) => {
-      console.log(res);
       setUserEvents(res.data);
     });
   });
@@ -27,7 +25,9 @@ function UserEvents(props) {
   //     dateB = new Date(b.event_date);
   //   return dateA - dateB;
   // });
-
+  if (userEvents && userEvents.length === 0) {
+    return <p>No Upcoming Events</p>;
+  }
   return (
     <>
       {userEvents &&
