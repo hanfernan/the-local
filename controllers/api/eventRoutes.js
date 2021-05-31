@@ -1,53 +1,65 @@
-const router = require('express').Router()
-const db = require('../../models')
-const { Location, Band } = require('../../models')
+const router = require("express").Router();
+const db = require("../../models");
+const { Location, Band } = require("../../models");
 
-router.get('/', (req, res) => {
-    db.Event.findAll(
-        { include: [{ model: Location }, { model: Band }] }
-    ).then(event => {
-        res.json(event)
+router.get("/", (req, res) => {
+  db.Event.findAll({ include: [{ model: Location }, { model: Band }] })
+    .then((event) => {
+      res.json(event);
     })
-        .catch(err => {
-            res.json(err);
-        })
+    .catch((err) => {
+      res.json(err);
+    });
 });
 
-router.get('/:id', (req, res) => {
-    db.Event.findByPk(req.params.id, { include: [{ model: Location }, { model: Band }] }
-    )
-        .then(event => {
-            res.json(event)
-        })
-        .catch(err => {
-            res.json(err)
-        })
+router.get("/:id", (req, res) => {
+  db.Event.findByPk(req.params.id, {
+    include: [{ model: Location }, { model: Band }],
+  })
+    .then((event) => {
+      res.json(event);
+    })
+    .catch((err) => {
+      res.json(err);
+    });
 });
 
-router.post('/', (req, res) => {
-    db.Event.create({
-        ...req.body
-    }).then(event => {
-        res.json(event)
-    }).catch(err => {
-        res.json(err);
+router.get("/events/:id", (req, res) => {
+  db.Event.findById(req.params.id, {
+    include: [{ model: Location }, { model: Band }],
+  })
+    .then((event) => {
+      res.json(event);
     })
-})
+    .catch((err) => {
+      res.json(err);
+    });
+});
 
-router.delete('/:id', (req, res) => {
-    db.Event.destroy({ where: { id: req.params.id } })
-})
-
-router.put('/:id', (req, res) => {
-    db.Event.update(
-        { ...req.body },
-        { where: { id: req.params.id } }
-    ).then(event => {
-        res.json(event)
-    }).catch(err => {
-        res.json(err)
+router.post("/", (req, res) => {
+  db.Event.create({
+    ...req.body,
+  })
+    .then((event) => {
+      res.json(event);
     })
-})
+    .catch((err) => {
+      res.json(err);
+    });
+});
 
+router.delete("/:id", (req, res) => {
+  db.Event.destroy({ where: { id: req.params.id } });
+});
 
-module.exports = router
+router.put("/:id", (req, res) => {
+  db.Event.update({ ...req.body }, { where: { id: req.params.id } })
+    .then((event) => {
+      res.json(event);
+    })
+    .catch((err) => {
+      res.json(err);
+    });
+});
+
+module.exports = router;

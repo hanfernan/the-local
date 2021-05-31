@@ -6,6 +6,7 @@ import API from "../utils/API";
 import Container from "../components/Container/index";
 import UpdateLinks from "../components/SocialMedia/UpdateLinks";
 import AddEventForm from "../components/UpcomingEvents/AddEventForm";
+import UserEventTable from "../components/UpcomingEvents/UserEventTable"
 
 
 function BandUser () {
@@ -46,6 +47,7 @@ function BandUser () {
                    <Col size="md-8">
                    <UpdateLinks id={bandInfo.id}/>
                    </Col>
+                   <UserEventTable id={bandInfo.id}/>
                    <Col size="md-6">
                    <AddEventForm id={bandInfo.id} />
                    </Col>
