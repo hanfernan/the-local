@@ -47,7 +47,7 @@ function BandUser () {
                    <Col size="md-8">
                    <UpdateLinks id={bandInfo.id}/>
                    </Col>
-                   <UserEventTable/>
+                   <UserEventTable id={bandInfo.id}/>
                    <Col size="md-6">
                    <AddEventForm id={bandInfo.id} />
                    </Col>

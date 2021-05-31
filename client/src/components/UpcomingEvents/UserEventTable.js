@@ -1,6 +1,8 @@
 import React from "react";
+import UserEvents from "./UserEvents";
 
 function UserEventsTable(props) {
+  console.log("user", props);
   //   function formatDate(date) {
   //     const dateArray = date.split("-");
   //     const year = dateArray[0];
@@ -46,7 +48,9 @@ function UserEventsTable(props) {
             <th scope="col">Featured Band</th>
           </tr>
         </thead>
-        {/* <tbody>{userEvents}</tbody> */}
+        <tbody>
+          <UserEvents {...props} />
+        </tbody>
       </table>
     </section>
   );

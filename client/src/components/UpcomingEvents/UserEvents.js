@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from "react";
-import UserEventsTable from "./UserEventsTable";
 import API from "../../utils/API";
 
-function UserEvents() {
+function UserEvents({ id }) {
   const [userEvents, setUserEvents] = useState([]);
 
   useEffect(() => {
-    API.getSingleEvent().then((res) => {
-      setUserEvents(res.data);
-      console.log("what", res.data);
+    API.getEventById(id).then((res) => {
+      setUserEvents(res);
+      console.log("what", res);
     });
-  }, []);
+  }, [id]);
 
   return (
     <>
-      <UserEventsTable events={userEvents} />
+      <div>
+        <p>hi</p>
+      </div>
     </>
   );
 }
