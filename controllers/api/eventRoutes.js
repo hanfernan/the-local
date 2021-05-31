@@ -24,8 +24,11 @@ router.get("/:id", (req, res) => {
     });
 });
 
-router.get("/events/:id", (req, res) => {
-  db.Event.findById(req.params.id, {
+router.get("/bands/:id", (req, res) => {
+  db.Event.findAll({
+    where: {
+      band_id: req.params.id,
+    },
     include: [{ model: Location }, { model: Band }],
   })
     .then((event) => {

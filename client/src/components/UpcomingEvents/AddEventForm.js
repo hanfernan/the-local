@@ -34,7 +34,11 @@ function MyVerticallyCenteredModal(props) {
   let locationsList =
     location.length > 0 &&
     location.map((item, i) => {
-      return <option value={item.id}>{item.location_name}</option>;
+      return (
+        <option value={item.id} key={i}>
+          {item.location_name}
+        </option>
+      );
     });
 
   return (
