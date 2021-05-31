@@ -30,11 +30,9 @@ const API = {
     return axios.get("/api/events");
   },
   getEventById: (eventId) => {
-    return axios.get("/api/events", {
-      params: {
-        band_id: eventId,
-      },
-    });
+    return axios.get(
+      "/api/events/bands/" + eventId
+    );
   },
   postEvent: (eventData) => {
     return axios.post("/api/events", eventData);
